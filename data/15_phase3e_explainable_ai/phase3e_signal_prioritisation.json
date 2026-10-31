@@ -1,0 +1,273 @@
+{
+  "total_pairs": 1167891,
+  "eb05_thresholds": {
+    "eb05_ge_1": {
+      "n_pairs": 490220,
+      "pct_of_total": 41.975
+    },
+    "eb05_ge_2": {
+      "n_pairs": 295560,
+      "pct_of_total": 25.307
+    },
+    "eb05_ge_3": {
+      "n_pairs": 218323,
+      "pct_of_total": 18.694
+    },
+    "eb05_ge_5": {
+      "n_pairs": 151683,
+      "pct_of_total": 12.988
+    },
+    "eb05_ge_10": {
+      "n_pairs": 100737,
+      "pct_of_total": 8.626
+    },
+    "eb05_ge_20": {
+      "n_pairs": 70202,
+      "pct_of_total": 6.011
+    }
+  },
+  "top_20_drugs_by_signal_count": [
+    {
+      "canonical_drug": "zometa",
+      "n_signals": 1411,
+      "max_eb05": 1489.291,
+      "median_eb05": 19.655
+    },
+    {
+      "canonical_drug": "aredia",
+      "n_signals": 1389,
+      "max_eb05": 3490.973,
+      "median_eb05": 42.409
+    },
+    {
+      "canonical_drug": "prednisone",
+      "n_signals": 1331,
+      "max_eb05": 105.616,
+      "median_eb05": 4.217
+    },
+    {
+      "canonical_drug": "alendronate",
+      "n_signals": 1288,
+      "max_eb05": 535.156,
+      "median_eb05": 8.116
+    },
+    {
+      "canonical_drug": "prednisolone",
+      "n_signals": 1279,
+      "max_eb05": 123.595,
+      "median_eb05": 4.825
+    },
+    {
+      "canonical_drug": "tacrolimus",
+      "n_signals": 1232,
+      "max_eb05": 174.613,
+      "median_eb05": 5.652
+    },
+    {
+      "canonical_drug": "methotrexate",
+      "n_signals": 1231,
+      "max_eb05": 52.095,
+      "median_eb05": 3.907
+    },
+    {
+      "canonical_drug": "mycophenolate mofetil",
+      "n_signals": 1054,
+      "max_eb05": 181.138,
+      "median_eb05": 6.115
+    },
+    {
+      "canonical_drug": "cyclophosphamide",
+      "n_signals": 1028,
+      "max_eb05": 91.934,
+      "median_eb05": 4.99
+    },
+    {
+      "canonical_drug": "methylprednisolone",
+      "n_signals": 1022,
+      "max_eb05": 224.526,
+      "median_eb05": 4.704
+    },
+    {
+      "canonical_drug": "adalimumab",
+      "n_signals": 1022,
+      "max_eb05": 18.829,
+      "median_eb05": 3.295
+    },
+    {
+      "canonical_drug": "rituximab",
+      "n_signals": 988,
+      "max_eb05": 100.309,
+      "median_eb05": 3.819
+    },
+    {
+      "canonical_drug": "fosamax",
+      "n_signals": 977,
+      "max_eb05": 1589.449,
+      "median_eb05": 13.43
+    },
+    {
+      "canonical_drug": "ondansetron",
+      "n_signals": 860,
+      "max_eb05": 586.223,
+      "median_eb05": 7.077
+    },
+    {
+      "canonical_drug": "vincristine",
+      "n_signals": 851,
+      "max_eb05": 135.339,
+      "median_eb05": 5.646
+    },
+    {
+      "canonical_drug": "cyclosporine",
+      "n_signals": 850,
+      "max_eb05": 177.684,
+      "median_eb05": 4.687
+    },
+    {
+      "canonical_drug": "dexamethasone",
+      "n_signals": 819,
+      "max_eb05": 85.545,
+      "median_eb05": 4.19
+    },
+    {
+      "canonical_drug": "doxorubicin",
+      "n_signals": 814,
+      "max_eb05": 141.591,
+      "median_eb05": 5.119
+    },
+    {
+      "canonical_drug": "quetiapine",
+      "n_signals": 800,
+      "max_eb05": 101.318,
+      "median_eb05": 4.752
+    },
+    {
+      "canonical_drug": "azathioprine",
+      "n_signals": 800,
+      "max_eb05": 383.211,
+      "median_eb05": 5.067
+    }
+  ],
+  "top_20_pts_by_signal_count": [
+    {
+      "canonical_pt": "Drug hypersensitivity",
+      "n_signals": 676,
+      "max_eb05": 62.815,
+      "median_eb05": 5.623
+    },
+    {
+      "canonical_pt": "Toxicity to various agents",
+      "n_signals": 596,
+      "max_eb05": 83.817,
+      "median_eb05": 6.297
+    },
+    {
+      "canonical_pt": "Completed suicide",
+      "n_signals": 532,
+      "max_eb05": 147.323,
+      "median_eb05": 10.638
+    },
+    {
+      "canonical_pt": "Hypotension",
+      "n_signals": 525,
+      "max_eb05": 53.255,
+      "median_eb05": 4.014
+    },
+    {
+      "canonical_pt": "Renal failure acute",
+      "n_signals": 522,
+      "max_eb05": 450.277,
+      "median_eb05": 8.402
+    },
+    {
+      "canonical_pt": "Drug abuse",
+      "n_signals": 483,
+      "max_eb05": 153.468,
+      "median_eb05": 10.16
+    },
+    {
+      "canonical_pt": "Drug interaction",
+      "n_signals": 479,
+      "max_eb05": 71.693,
+      "median_eb05": 3.601
+    },
+    {
+      "canonical_pt": "Thrombocytopenia",
+      "n_signals": 467,
+      "max_eb05": 68.373,
+      "median_eb05": 4.626
+    },
+    {
+      "canonical_pt": "Foetal exposure during pregnancy",
+      "n_signals": 464,
+      "max_eb05": 118.888,
+      "median_eb05": 5.153
+    },
+    {
+      "canonical_pt": "Hepatocellular injury",
+      "n_signals": 459,
+      "max_eb05": 187.818,
+      "median_eb05": 6.522
+    },
+    {
+      "canonical_pt": "Anaemia",
+      "n_signals": 448,
+      "max_eb05": 57.503,
+      "median_eb05": 3.541
+    },
+    {
+      "canonical_pt": "Acute kidney injury",
+      "n_signals": 446,
+      "max_eb05": 106.849,
+      "median_eb05": 3.981
+    },
+    {
+      "canonical_pt": "Pyrexia",
+      "n_signals": 446,
+      "max_eb05": 27.601,
+      "median_eb05": 2.954
+    },
+    {
+      "canonical_pt": "Intentional overdose",
+      "n_signals": 443,
+      "max_eb05": 149.241,
+      "median_eb05": 7.252
+    },
+    {
+      "canonical_pt": "Coma",
+      "n_signals": 441,
+      "max_eb05": 234.486,
+      "median_eb05": 6.606
+    },
+    {
+      "canonical_pt": "Hyponatraemia",
+      "n_signals": 439,
+      "max_eb05": 185.134,
+      "median_eb05": 5.158
+    },
+    {
+      "canonical_pt": "Somnolence",
+      "n_signals": 434,
+      "max_eb05": 62.078,
+      "median_eb05": 3.695
+    },
+    {
+      "canonical_pt": "Cardiac arrest",
+      "n_signals": 434,
+      "max_eb05": 101.152,
+      "median_eb05": 4.29
+    },
+    {
+      "canonical_pt": "Overdose",
+      "n_signals": 412,
+      "max_eb05": 77.589,
+      "median_eb05": 4.135
+    },
+    {
+      "canonical_pt": "Suicide attempt",
+      "n_signals": 410,
+      "max_eb05": 149.249,
+      "median_eb05": 6.164
+    }
+  ]
+}

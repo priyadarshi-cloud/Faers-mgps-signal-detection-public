@@ -1,0 +1,44 @@
+{
+  "task": "TASK-T1-12",
+  "task_description": "Final Scientific Corrections and Contextual Reporter Audit",
+  "output_directory": "data/34_task_t1_12_final_scientific_corrections",
+  "created_at": "2026-10-18T00:43:00+05:30",
+  "artifacts": {
+    "recovery_report.md": {
+      "size_bytes": 3431,
+      "sha256": "93ffaba70d60217adf0d7bbbd5fc95366c511f04904a3230df31efb0e8297b24"
+    },
+    "scientific_corrections_report.md": {
+      "size_bytes": 18956,
+      "sha256": "5f21981721a613efefdd1e8de78241527943ccd062a759f416197e9d9993466d"
+    },
+    "reporter_code_dictionary_audit.csv": {
+      "size_bytes": 3227,
+      "sha256": "a9706a6a7389712074d5d2b09a58848dfcf0c0900e4eee159b266e82b1b029a1"
+    },
+    "reporter_feature_recomputation_summary.csv": {
+      "size_bytes": 453,
+      "sha256": "49260b20186f2b06fc2f1df00b053dec8730d2ee87cd25c7f3c8768a34a4060d"
+    },
+    "contextual_results_discrepancy_log.csv": {
+      "size_bytes": 3859,
+      "sha256": "57d9dafa2ab56a9215c4efdac2ba5470f8caa4507e67a644102c83d2563906e1"
+    },
+    "manuscript_change_log.csv": {
+      "size_bytes": 7454,
+      "sha256": "31aa9e372e00a8b073203d96cd4bcfd2199068968985ce1dc088a9970973de75"
+    },
+    "manuscript_final_scientifically_corrected.md": {
+      "size_bytes": 38063,
+      "sha256": "d7bb4f33b75d5e878cbf7a232b6609baa54f3da3f0380c104fb571c5ca5a1343"
+    },
+    "claims_traceability.csv": {
+      "size_bytes": 6040,
+      "sha256": "c6a3e50b6ba954b286b3542320ce19b5e2692a7027ca9ecf4b0df2cd45ae8189"
+    },
+    "validation_script.py": {
+      "size_bytes": 9891,
+      "sha256": "6373fb90343d724ffbc2474d5663f8475343e4b9048f20f7d4adfc6f986b1b52"
+    }
+  }
+}

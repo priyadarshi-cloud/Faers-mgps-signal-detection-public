@@ -1,0 +1,18 @@
+  ✅ PASS  Fixture 1: Case with one report
+  ✅ PASS  Fixture 2: Case with multiple versions before cutoff
+  ✅ PASS  Fixture 3: Pre-cutoff version with post-cutoff follow-up
+  ✅ PASS  Fixture 4: Tied version dates (deterministic tie-breaking)
+  ✅ PASS  Fixture 5: Missing or invalid dates (quarantine isolation)
+  ✅ PASS  Fixture 6: Deleted case purged
+  ✅ PASS  Fixture 7: Deletion identifier type validation
+  ✅ PASS  Fixture 8: Missing primaryid or caseid quarantined
+  ✅ PASS  Fixture 9: Duplicate rows across quarters deduplicated
+  ✅ PASS  Fixture 10: 500-row stress test (uniqueness verified)
+  ✅ PASS  Fixture 11: Empty input DataFrame
+  ✅ PASS  Fixture 12: All cases deleted
+  ✅ PASS  Fixture 13: Count identity verification
+  ✅ PASS  Fixture 14: Date exactly on cutoff boundary included
+
+=================================================================
+Results: 14 PASS  |  0 FAIL  |  14 total fixtures
+=================================================================

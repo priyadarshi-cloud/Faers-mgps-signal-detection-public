@@ -1,0 +1,194 @@
+{
+  "DEMO": {
+    "file_name": "DEMO14Q1.txt",
+    "delimiter": "$",
+    "column_count": 22,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "caseversion",
+      "i_f_code",
+      "event_dt",
+      "mfr_dt",
+      "init_fda_dt",
+      "fda_dt",
+      "rept_cod",
+      "mfr_num",
+      "mfr_sndr",
+      "age",
+      "age_cod",
+      "gndr_cod",
+      "e_sub",
+      "wt",
+      "wt_cod",
+      "rept_dt",
+      "to_mfr",
+      "occp_cod",
+      "reporter_country",
+      "occr_country"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "caseversion",
+      "i_f_code",
+      "event_dt",
+      "mfr_dt",
+      "init_fda_dt",
+      "fda_dt",
+      "rept_cod",
+      "mfr_num",
+      "mfr_sndr",
+      "age",
+      "age_cod",
+      "sex",
+      "e_sub",
+      "wt",
+      "wt_cod",
+      "rept_dt",
+      "to_mfr",
+      "occp_cod",
+      "reporter_country",
+      "occr_country"
+    ],
+    "sample_line_snippet": "100033001$10003300$1$I$$20131015$20140306$20140306$PER$1289378$GENENTECH$77$YR$F$N$$$20140124$N$CN$US$"
+  },
+  "DRUG": {
+    "file_name": "DRUG14Q1.txt",
+    "delimiter": "$",
+    "column_count": 19,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "drug_seq",
+      "role_cod",
+      "drugname",
+      "val_vbm",
+      "route",
+      "dose_vbm",
+      "cum_dose_chr",
+      "cum_dose_unit",
+      "dechal",
+      "rechal",
+      "lot_num",
+      "exp_dt",
+      "nda_num",
+      "dose_amt",
+      "dose_unit",
+      "dose_form",
+      "dose_freq"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "drug_seq",
+      "role_cod",
+      "drugname",
+      "val_vbm",
+      "route",
+      "dose_vbm",
+      "cum_dose_chr",
+      "cum_dose_unit",
+      "dechal",
+      "rechal",
+      "lot_num",
+      "exp_dt",
+      "nda_num",
+      "dose_amt",
+      "dose_unit",
+      "dose_form",
+      "dose_freq"
+    ],
+    "sample_line_snippet": "100033001$10003300$1$PS$BONIVA$1$INTRAVENOUS$3 MG, 1 IN 3 M, INTRAVENOUS (NOT OTHERWISE SPECIFIED)$$$D$D$ H6200HO3$$021858$3$MG$$"
+  },
+  "REAC": {
+    "file_name": "REAC14Q1.txt",
+    "delimiter": "$",
+    "column_count": 3,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "pt"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "pt"
+    ],
+    "sample_line_snippet": "100033001$10003300$Arthralgia"
+  },
+  "OUTC": {
+    "file_name": "OUTC14Q1.txt",
+    "delimiter": "$",
+    "column_count": 3,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "outc_cod"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "outc_cod"
+    ],
+    "sample_line_snippet": "100033001$10003300$DS"
+  },
+  "RPSR": {
+    "file_name": "RPSR14Q1.txt",
+    "delimiter": "$",
+    "column_count": 3,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "rpsr_cod"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "rpsr_cod"
+    ],
+    "sample_line_snippet": "100033001$10003300$CSM"
+  },
+  "THER": {
+    "file_name": "THER14Q1.txt",
+    "delimiter": "$",
+    "column_count": 7,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "dsg_drug_seq",
+      "start_dt",
+      "end_dt",
+      "dur",
+      "dur_cod"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "dsg_drug_seq",
+      "start_dt",
+      "end_dt",
+      "dur",
+      "dur_cod"
+    ],
+    "sample_line_snippet": "100033001$10003300$1$20130913$$$"
+  },
+  "INDI": {
+    "file_name": "INDI14Q1.txt",
+    "delimiter": "$",
+    "column_count": 4,
+    "raw_columns": [
+      "primaryid",
+      "caseid",
+      "indi_drug_seq",
+      "indi_pt"
+    ],
+    "harmonized_columns": [
+      "primaryid",
+      "caseid",
+      "indi_drug_seq",
+      "indi_pt"
+    ],
+    "sample_line_snippet": "100033001$10003300$1$Osteoporosis"
+  }
+}

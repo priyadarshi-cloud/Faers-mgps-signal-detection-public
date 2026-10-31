@@ -1,0 +1,123 @@
+# =============================================================================
+# FAERS MGPS Research Repository — .gitignore
+# Prepared: TASK-T1-36, October 2026
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python virtual environment (DO NOT commit — 383 MB, platform-specific binaries)
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+.env/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Pytest / testing artifacts
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Pyrefly / linter caches
+.pyrefly_cache/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+*.egg
+
+# =============================================================================
+# Raw FAERS archive data (TOO LARGE — approximately 14.7 GB total)
+# Users must download these themselves via scripts/download_continuous_faers.py
+# =============================================================================
+data/07_phase3a_continuous_ingestion/raw_zips/
+data/07_phase3a_continuous_ingestion/extracted/
+
+# Sample quarter raw archives and extractions (from data/01_raw/ — ~1.0 GB)
+data/01_raw/sample_quarters/
+
+# =============================================================================
+# Large derived data files that must be excluded from Git (>100 MB each)
+# Users can regenerate these locally via scripts/ or download from Zenodo/Dryad.
+# =============================================================================
+# Canonical cohort snapshots (>500 MB each)
+data/08_phase3a2_snapshot/*.csv
+data/09_phase3a4_dual_snapshots/*.csv
+
+# Feature matrices (>140 MB each)
+data/10_phase3b_features/*.csv
+
+# Primary scored candidate pairs table (346 MB)
+data/13_phase3c2_mgps_scoring/*.csv
+
+# Pre-audit intermediate backup datasets (~1.1 GB)
+data/03_primary/
+
+# =============================================================================
+# Secrets and credentials (MUST EXCLUDE)
+# =============================================================================
+.env
+*.env
+.env.*
+secrets.yaml
+secrets.json
+*.pem
+*.key
+*_credentials.json
+*_service_account.json
+config/local_settings.py
+
+# =============================================================================
+# IDE and editor artifacts
+# =============================================================================
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Temporary and scratch files
+# =============================================================================
+*.tmp
+*.temp
+*.log
+*.out
+scratch/
+search_files.py
+
+# =============================================================================
+# Jupyter notebooks (if any — none currently, but defensive)
+# =============================================================================
+# .ipynb_checkpoints/
+
+# =============================================================================
+# WHAT IS INTENTIONALLY INCLUDED (do not accidentally ignore these)
+# =============================================================================
+# src/                              — Core library modules (INCLUDE)
+# scripts/                         — All pipeline scripts (INCLUDE)
+# data/05_reference_standards/     — OMOP/EU-ADR reference files (INCLUDE)
+# data/04_audit_sider/             — SIDER reference file (INCLUDE - 3 MB gzip)
+# data/13_phase3c2_mgps_scoring/   — Checkpoints & metrics JSON (INCLUDE; CSV excluded)
+# data/20_track1_publication_tables/  — Publication tables CSV (INCLUDE - small)
+# data/21_track1_publication_figures/ — Publication figures PNG/PDF (INCLUDE)
+# data/33_task_t1_11_final_benchmark_audit/ — Recomputed stats (INCLUDE)
+# data/57_task_t1_35_consistency_corrections/ — Approved manuscript (INCLUDE)
+# data/39_task_t1_17_release_readiness/ — Release readiness package (INCLUDE)
+# data/58_task_t1_36_github_release_prep/ — This task outputs (INCLUDE)
+# requirements.txt                 — Dependency manifest (INCLUDE)
+# pyproject.toml                   — Linter config (INCLUDE)
+# README.md                        — Repository documentation (INCLUDE)
+# research_architecture_blueprint.md — Architecture doc (INCLUDE)
+# *.md files in data/              — Audit and report documents (INCLUDE)

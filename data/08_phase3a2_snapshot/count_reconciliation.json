@@ -1,0 +1,39 @@
+{
+  "phase3a_reference": {
+    "total_raw_demo_reports": 15428448,
+    "cumulative_deleted_caseids": 177987,
+    "active_retained_reports": 15345814,
+    "unique_patient_cases_n": 13311280,
+    "pre_cutoff_valid_version_reports": 6560907
+  },
+  "phase3a2_snapshot_pipeline": {
+    "n_raw_input_rows": 15428448,
+    "n_date_ineligible_quarantined": 0,
+    "n_after_date_parsing": 15427985,
+    "n_excluded_init_after_cutoff": 8504708,
+    "n_after_init_filter": 6923277,
+    "n_excluded_fda_after_cutoff": 333954,
+    "n_after_fda_filter": 6589323,
+    "n_excluded_deleted": 28806,
+    "n_after_deletion_purge": 6560517,
+    "n_eligible_unique_caseids": 5987173,
+    "n_selected_rows": 5987173,
+    "duplicate_caseid_in_snapshot": 0,
+    "audit_selected_eq_eligible_caseids": true
+  },
+  "cross_checks": {
+    "raw_rows_match_phase3a": true,
+    "deleted_ids_match": true,
+    "no_duplicate_caseids_in_snapshot": true,
+    "count_identity_holds": true
+  },
+  "null_date_audit_summary": {
+    "total_rows_with_invalid_init_fda_dt": 0,
+    "quarters_with_at_least_one_invalid": 0,
+    "pct_invalid_global": 0.0
+  },
+  "generated_at": "2026-10-11T01:48:09.077962",
+  "cutoff": "2018-12-31",
+  "quarters_loaded": 40,
+  "cumulative_deleted_caseids_loaded": 177987
+}

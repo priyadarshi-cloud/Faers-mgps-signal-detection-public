@@ -1,0 +1,27 @@
+{
+  "phase": "Phase 3F -- Robustness Checks and Scientific Validation",
+  "generated_at_utc": "2026-10-11T20:01:50Z",
+  "primary_scored_table_sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758",
+  "files": {
+    "phase3f_ablation_results.csv": {
+      "size_bytes": 1720,
+      "sha256": "9f7bf7cc512b3132238c8aab041f21e5ce2e7a86338cebd6f25a2d2ca54b87ee"
+    },
+    "phase3f_checkpoint.json": {
+      "size_bytes": 10107,
+      "sha256": "c5773fb761df8ebb657edbd5820c764f0941aa0ef88934d88ff4806feb43a316"
+    },
+    "phase3f_robustness_metrics.json": {
+      "size_bytes": 11399,
+      "sha256": "9345bcde2d8f57c52db6f974f577d4b36b38e55f6e6bf80efe194f569b2d6b32"
+    },
+    "phase3f_shap_stability.csv": {
+      "size_bytes": 779,
+      "sha256": "f31776ad9de622cb991461146d46e18c0fa139b73cc4cc819f61659f74f3f90f"
+    },
+    "phase3f_strata_calibration.csv": {
+      "size_bytes": 749,
+      "sha256": "6df0cc698b1a84e327b4756c78af965cd1c3ab591a1f1f8e439660d306f1726f"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "primary_fit": {
+    "bounds": [
+      0.001,
+      10.0
+    ],
+    "hyperparameters": {
+      "alpha1": 0.001,
+      "beta1": 0.006808950259983445,
+      "alpha2": 0.28588672696109757,
+      "beta2": 0.40037082921853445,
+      "w": 0.8499041546352064,
+      "mean_comp1": 0.1468655169765378,
+      "mean_comp2": 0.714054836410302
+    },
+    "log_likelihood": -3372348.3387261317
+  },
+  "alternative_fits": {
+    "sens_alpha1_ge_0_01": {
+      "description": "Tighter lower bound (alpha1 >= 0.01)",
+      "alpha1_min_bound": 0.01,
+      "converged": true,
+      "iterations": 32,
+      "fit_time_seconds": 9.722008466720581,
+      "hyperparameters": {
+        "alpha1": 0.1573252839542405,
+        "beta1": 0.2752248752242152,
+        "alpha2": 2.8206833273110274,
+        "beta2": 0.05,
+        "w": 0.9942749192849917,
+        "mean_comp1": 0.5716245082355786,
+        "mean_comp2": 56.41366654622055
+      },
+      "log_likelihood": -3440594.533290366,
+      "delta_log_likelihood": -68246.19456423447,
+      "spearman_rank_correlation": 0.9998655324841043,
+      "pearson_correlation": 0.8820494500702181
+    },
+    "sens_alpha1_ge_0_05": {
+      "description": "openEBGM default bound (alpha1 >= 0.05)",
+      "alpha1_min_bound": 0.05,
+      "converged": true,
+      "iterations": 34,
+      "fit_time_seconds": 10.094148874282837,
+      "hyperparameters": {
+        "alpha1": 0.1573190309848082,
+        "beta1": 0.27522112704097634,
+        "alpha2": 2.820707451323436,
+        "beta2": 0.05,
+        "w": 0.9942751297144817,
+        "mean_comp1": 0.571609573277366,
+        "mean_comp2": 56.41414902646872
+      },
+      "log_likelihood": -3440594.5332871787,
+      "delta_log_likelihood": -68246.19456104701,
+      "spearman_rank_correlation": 0.9998655284033362,
+      "pearson_correlation": 0.8820496954958265
+    },
+    "sens_alpha1_ge_0_0001": {
+      "description": "Ultra-relaxed bound (alpha1 >= 0.0001)",
+      "alpha1_min_bound": 0.0001,
+      "converged": true,
+      "iterations": 32,
+      "fit_time_seconds": 10.110831260681152,
+      "hyperparameters": {
+        "alpha1": 0.15731956341792264,
+        "beta1": 0.27522162363728014,
+        "alpha2": 2.820698744029618,
+        "beta2": 0.05,
+        "w": 0.9942751003307171,
+        "mean_comp1": 0.5716104764546303,
+        "mean_comp2": 56.413974880592356
+      },
+      "log_likelihood": -3440594.5332872123,
+      "delta_log_likelihood": -68246.19456108054,
+      "spearman_rank_correlation": 0.9998655285991762,
+      "pearson_correlation": 0.8820496115120492
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "drug_names.tsv": {
+    "source_url": "https://sideeffects.embl.de/media/download/drug_names.tsv",
+    "bytes": 34759,
+    "sha256": "6427a3e3202c71a81dff97092957aacf0700b9c01f34b07e452a1ec47c92b007"
+  },
+  "drug_atc.tsv": {
+    "source_url": "https://sideeffects.embl.de/media/download/drug_atc.tsv",
+    "bytes": 32760,
+    "sha256": "b457e124cc13c482bbe3afcf76c43bd53764c14d40da563785e20146c2e0f229"
+  },
+  "meddra_all_se.tsv.gz": {
+    "source_url": "https://sideeffects.embl.de/media/download/meddra_all_se.tsv.gz",
+    "bytes": 2381171,
+    "sha256": "119b2f5319a9398da83e5fe3419889010dbacf8d3eef590251b00c025e2b3f99"
+  },
+  "meddra_all_indications.tsv.gz": {
+    "source_url": "https://sideeffects.embl.de/media/download/meddra_all_indications.tsv.gz",
+    "bytes": 344689,
+    "sha256": "3e019c1baec86a5ce056e428da803e821c2708ef22522950a738f330b5985d02"
+  },
+  "README": {
+    "source_url": "https://sideeffects.embl.de/media/download/README",
+    "bytes": 3304,
+    "sha256": "de992e6c1475d774d9f8f8271a6c371e2f8b2c86dcf459e871dfd1a830f54c06"
+  }
+}

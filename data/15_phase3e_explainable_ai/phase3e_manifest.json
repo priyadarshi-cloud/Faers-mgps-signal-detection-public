@@ -1,0 +1,97 @@
+{
+  "phase": "Phase 3E -- Surrogate SHAP Analysis",
+  "generated_at_utc": "2026-10-11T18:17:01.204616+00:00",
+  "surrogate_disclaimer": "Surrogate models predict log(EB05) MGPS scores. SHAP values explain surrogate behaviour -- NOT clinical causality. No positive labels used.",
+  "dll_safety_note": "LightGBM blocked by Windows Application Control policy. Using sklearn.RandomForestRegressor + sklearn.cluster mock stub.",
+  "historical_label_gate": "BLOCKED -- see phase3e_explainable_ai_report.md",
+  "primary_scored_table_sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758",
+  "random_seed": 42,
+  "shap_sample_n": 5000,
+  "models": {
+    "M1_surrogate": {
+      "description": "Surrogate predicting log(EB05) from 11 pure-contextual features",
+      "algorithm": "sklearn.RandomForestRegressor",
+      "features": [
+        "mean_age",
+        "median_age",
+        "age_std",
+        "age_missing_ratio",
+        "female_ratio",
+        "male_ratio",
+        "hp_reporter_ratio",
+        "csm_reporter_ratio",
+        "monotherapy_ratio",
+        "mean_concomitant_count",
+        "secondary_suspect_ratio"
+      ],
+      "metrics": {
+        "train_r2": 0.2362,
+        "test_r2": 0.23,
+        "train_rmse": 1.4705,
+        "test_rmse": 1.4763,
+        "n_train": 934312,
+        "n_test": 233579,
+        "n_total": 1167891,
+        "n_imputed": 373234,
+        "fit_time_s": 93.3,
+        "algorithm": "sklearn.RandomForestRegressor",
+        "n_estimators": 100,
+        "max_depth": 10,
+        "note": "Reconstructed from task-1246 log (metrics file not found)"
+      }
+    },
+    "M2_surrogate": {
+      "description": "Surrogate predicting log(EB05) from 20 multimodal features",
+      "algorithm": "sklearn.RandomForestRegressor",
+      "features": [
+        "mean_age",
+        "median_age",
+        "age_std",
+        "age_missing_ratio",
+        "female_ratio",
+        "male_ratio",
+        "hp_reporter_ratio",
+        "csm_reporter_ratio",
+        "monotherapy_ratio",
+        "mean_concomitant_count",
+        "secondary_suspect_ratio",
+        "a",
+        "b",
+        "c",
+        "d",
+        "prr",
+        "prr_chi2",
+        "ror",
+        "ror_lower_95",
+        "ror_upper_95"
+      ],
+      "metrics": {
+        "train_r2": 0.999208,
+        "test_r2": 0.999125,
+        "train_rmse": 0.047364,
+        "test_rmse": 0.049763,
+        "n_train": 934312,
+        "n_test": 233579,
+        "n_total": 1167891,
+        "n_imputed": 373234,
+        "fit_time_s": 132.79,
+        "algorithm": "sklearn.RandomForestRegressor",
+        "n_estimators": 100,
+        "max_depth": 10
+      },
+      "shap_time_s": 101.48
+    }
+  },
+  "total_elapsed_s": 250.41,
+  "files": {
+    "phase3e_high_signal_local_m2.csv": "1073b53392a3b8e6816d2760e5d516f57079024631170130d33902b2162d23c8",
+    "phase3e_low_signal_local_m2.csv": "1091185522ebdfa20813ffb978d83b8fd401d8ec35c7eaba264272f742d72194",
+    "phase3e_shap_global_m1.csv": "8d2613a5f2bd1810277e981d99f2f2e28ac2cd15224f43dd284abc1a0ed8cba7",
+    "phase3e_shap_global_m2.csv": "537f0b8d2d6572e8e8c8a52e9f1d37d724eaa463e5a546bdaf7aafad6aa402f1",
+    "phase3e_shap_sample_m1.npz": "3aa4c14ea1bbfe8e91ce7e736b61be6b69dd7cb01e48848cbec40c7d2a51eafa",
+    "phase3e_shap_sample_m2.npz": "cc39f391095969f7b2756e56c9b91e52e2bc16e9ee7445d0c3749f5d069053d3",
+    "phase3e_signal_prioritisation.json": "3ab8576f0e794a234b300471dd574cff6519fc6131a54f07921db6585aee3ce2",
+    "phase3e_surrogate_metrics.json": "233976d5a3fadb8030fe4d3bc768d8e3d18bc3808bb9178d65f3661eb034a4bf"
+  },
+  "errors": []
+}

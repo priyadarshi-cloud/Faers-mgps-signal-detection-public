@@ -1,0 +1,557 @@
+{
+  "phase": "Phase 3D",
+  "timestamp_utc": "2026-10-11T16:26:13Z",
+  "status": "EVALUATION_COMPLETE",
+  "scored_dataset_metadata": {
+    "status": "PASS",
+    "timestamp_utc": "2026-10-11T16:25:34Z",
+    "scored_table_sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758",
+    "scored_table_path": "<project-root>/data\\13_phase3c2_mgps_scoring\\phase3c2_scored_candidate_pairs.csv",
+    "scored_table_size_bytes": 346348936,
+    "primary_hyperparameters": {
+      "alpha1": 0.001,
+      "beta1": 0.006808950259983445,
+      "alpha2": 0.28588672696109757,
+      "beta2": 0.40037082921853445,
+      "w": 0.8499041546352064,
+      "mean_comp1": 0.1468655169765378,
+      "mean_comp2": 0.714054836410302
+    },
+    "fit_log_likelihood": -3372348.3387261317,
+    "fit_standard_errors": {
+      "alpha1_se": 6.768018068729873e-05,
+      "beta1_se": 4.347550105350642e-05,
+      "alpha2_se": 0.002643220868200269,
+      "beta2_se": 0.0021154305267963858,
+      "w_se": 0.008722595917727545
+    }
+  },
+  "coverage_summary": {
+    "omop": {
+      "total_reference_pairs": 399,
+      "total_positives": 165,
+      "total_negatives": 234,
+      "matched_pairs": 203,
+      "matched_positives": 114,
+      "matched_negatives": 89,
+      "unmatched_pairs": 196,
+      "unmatched_positives": 51,
+      "unmatched_negatives": 145,
+      "coverage_overall_pct": 50.877192982456144,
+      "coverage_positive_pct": 69.0909090909091,
+      "coverage_negative_pct": 38.034188034188034,
+      "original_prevalence_pct": 41.35338345864661,
+      "matched_prevalence_pct": 56.15763546798029
+    },
+    "euadr": {
+      "total_reference_pairs": 93,
+      "total_positives": 43,
+      "total_negatives": 50,
+      "matched_pairs": 66,
+      "matched_positives": 39,
+      "matched_negatives": 27,
+      "unmatched_pairs": 27,
+      "unmatched_positives": 4,
+      "unmatched_negatives": 23,
+      "coverage_overall_pct": 70.96774193548387,
+      "coverage_positive_pct": 90.69767441860465,
+      "coverage_negative_pct": 54.0,
+      "original_prevalence_pct": 46.236559139784944,
+      "matched_prevalence_pct": 59.09090909090909
+    }
+  },
+  "benchmark_evaluation": {
+    "omop": {
+      "EB05": {
+        "method": "EB05 (Primary)",
+        "n_evaluated": 203,
+        "n_positives": 114,
+        "n_negatives": 89,
+        "prevalence": 0.5615763546798029,
+        "pr_auc": 0.8619359474888173,
+        "pr_auc_95ci": [
+          0.8084659648459739,
+          0.9097540650260392
+        ],
+        "roc_auc": 0.8136211314803864,
+        "roc_auc_95ci": [
+          0.7539238456706725,
+          0.8699974973206609
+        ],
+        "precision_at_k": {
+          "P@10": 1.0,
+          "P@25": 1.0,
+          "P@50": 0.92,
+          "P@100": 0.81
+        },
+        "recall_at_k": {
+          "R@10": 0.08771929824561403,
+          "R@25": 0.21929824561403508,
+          "R@50": 0.40350877192982454,
+          "R@100": 0.7105263157894737
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 86,
+            "fp": 23,
+            "tn": 66,
+            "fn": 28,
+            "sensitivity": 0.7543859649122807,
+            "specificity": 0.7415730337078652,
+            "ppv_precision": 0.7889908256880734
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 59,
+            "fp": 12,
+            "tn": 77,
+            "fn": 55,
+            "sensitivity": 0.5175438596491229,
+            "specificity": 0.8651685393258427,
+            "ppv_precision": 0.8309859154929577
+          }
+        }
+      },
+      "EBGM": {
+        "method": "EBGM",
+        "n_evaluated": 203,
+        "n_positives": 114,
+        "n_negatives": 89,
+        "prevalence": 0.5615763546798029,
+        "pr_auc": 0.8497524357017411,
+        "pr_auc_95ci": [
+          0.7895905290689046,
+          0.9057650340092684
+        ],
+        "roc_auc": 0.8071161048689138,
+        "roc_auc_95ci": [
+          0.7467904469480099,
+          0.8661874905698741
+        ],
+        "precision_at_k": {
+          "P@10": 1.0,
+          "P@25": 0.96,
+          "P@50": 0.88,
+          "P@100": 0.8
+        },
+        "recall_at_k": {
+          "R@10": 0.08771929824561403,
+          "R@25": 0.21052631578947367,
+          "R@50": 0.38596491228070173,
+          "R@100": 0.7017543859649122
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 98,
+            "fp": 43,
+            "tn": 46,
+            "fn": 16,
+            "sensitivity": 0.8596491228070176,
+            "specificity": 0.5168539325842697,
+            "ppv_precision": 0.6950354609929078
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 84,
+            "fp": 20,
+            "tn": 69,
+            "fn": 30,
+            "sensitivity": 0.7368421052631579,
+            "specificity": 0.7752808988764045,
+            "ppv_precision": 0.8076923076923077
+          }
+        }
+      },
+      "PRR": {
+        "method": "PRR (Comparator)",
+        "n_evaluated": 203,
+        "n_positives": 114,
+        "n_negatives": 89,
+        "prevalence": 0.5615763546798029,
+        "pr_auc": 0.8312762786454989,
+        "pr_auc_95ci": [
+          0.7610099682887201,
+          0.8974501872314242
+        ],
+        "roc_auc": 0.7995269071555293,
+        "roc_auc_95ci": [
+          0.736968640327865,
+          0.8628641840087623
+        ],
+        "precision_at_k": {
+          "P@10": 1.0,
+          "P@25": 0.92,
+          "P@50": 0.88,
+          "P@100": 0.79
+        },
+        "recall_at_k": {
+          "R@10": 0.08771929824561403,
+          "R@25": 0.20175438596491227,
+          "R@50": 0.38596491228070173,
+          "R@100": 0.6929824561403509
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 100,
+            "fp": 45,
+            "tn": 44,
+            "fn": 14,
+            "sensitivity": 0.8771929824561403,
+            "specificity": 0.4943820224719101,
+            "ppv_precision": 0.6896551724137931
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 88,
+            "fp": 26,
+            "tn": 63,
+            "fn": 26,
+            "sensitivity": 0.7719298245614035,
+            "specificity": 0.7078651685393258,
+            "ppv_precision": 0.7719298245614035
+          }
+        }
+      },
+      "ROR": {
+        "method": "ROR (Comparator)",
+        "n_evaluated": 203,
+        "n_positives": 114,
+        "n_negatives": 89,
+        "prevalence": 0.5615763546798029,
+        "pr_auc": 0.8299091525462134,
+        "pr_auc_95ci": [
+          0.7589224201573737,
+          0.8960149940394322
+        ],
+        "roc_auc": 0.7986398580721467,
+        "roc_auc_95ci": [
+          0.7365359130665253,
+          0.8617970555148319
+        ],
+        "precision_at_k": {
+          "P@10": 1.0,
+          "P@25": 0.92,
+          "P@50": 0.88,
+          "P@100": 0.79
+        },
+        "recall_at_k": {
+          "R@10": 0.08771929824561403,
+          "R@25": 0.20175438596491227,
+          "R@50": 0.38596491228070173,
+          "R@100": 0.6929824561403509
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 100,
+            "fp": 45,
+            "tn": 44,
+            "fn": 14,
+            "sensitivity": 0.8771929824561403,
+            "specificity": 0.4943820224719101,
+            "ppv_precision": 0.6896551724137931
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 88,
+            "fp": 26,
+            "tn": 63,
+            "fn": 26,
+            "sensitivity": 0.7719298245614035,
+            "specificity": 0.7078651685393258,
+            "ppv_precision": 0.7719298245614035
+          }
+        }
+      }
+    },
+    "euadr": {
+      "EB05": {
+        "method": "EB05 (Primary)",
+        "n_evaluated": 66,
+        "n_positives": 39,
+        "n_negatives": 27,
+        "prevalence": 0.5909090909090909,
+        "pr_auc": 0.9578413282014029,
+        "pr_auc_95ci": [
+          0.9005647875059124,
+          0.9920543185249165
+        ],
+        "roc_auc": 0.936372269705603,
+        "roc_auc_95ci": [
+          0.8603634586332534,
+          0.9880295108117688
+        ],
+        "precision_at_k": {
+          "P@5": 1.0,
+          "P@10": 1.0,
+          "P@20": 1.0,
+          "P@30": 0.9333333333333333
+        },
+        "recall_at_k": {
+          "R@5": 0.1282051282051282,
+          "R@10": 0.2564102564102564,
+          "R@20": 0.5128205128205128,
+          "R@30": 0.717948717948718
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 37,
+            "fp": 5,
+            "tn": 22,
+            "fn": 2,
+            "sensitivity": 0.9487179487179487,
+            "specificity": 0.8148148148148148,
+            "ppv_precision": 0.8809523809523809
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 35,
+            "fp": 2,
+            "tn": 25,
+            "fn": 4,
+            "sensitivity": 0.8974358974358975,
+            "specificity": 0.9259259259259259,
+            "ppv_precision": 0.9459459459459459
+          }
+        }
+      },
+      "EBGM": {
+        "method": "EBGM",
+        "n_evaluated": 66,
+        "n_positives": 39,
+        "n_negatives": 27,
+        "prevalence": 0.5909090909090909,
+        "pr_auc": 0.9485700446952834,
+        "pr_auc_95ci": [
+          0.8809811157103933,
+          0.987378619530165
+        ],
+        "roc_auc": 0.9240265906932573,
+        "roc_auc_95ci": [
+          0.8443051944866827,
+          0.9802631578947368
+        ],
+        "precision_at_k": {
+          "P@5": 1.0,
+          "P@10": 1.0,
+          "P@20": 0.95,
+          "P@30": 0.9333333333333333
+        },
+        "recall_at_k": {
+          "R@5": 0.1282051282051282,
+          "R@10": 0.2564102564102564,
+          "R@20": 0.48717948717948717,
+          "R@30": 0.717948717948718
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 38,
+            "fp": 13,
+            "tn": 14,
+            "fn": 1,
+            "sensitivity": 0.9743589743589743,
+            "specificity": 0.5185185185185185,
+            "ppv_precision": 0.7450980392156863
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 35,
+            "fp": 5,
+            "tn": 22,
+            "fn": 4,
+            "sensitivity": 0.8974358974358975,
+            "specificity": 0.8148148148148148,
+            "ppv_precision": 0.875
+          }
+        }
+      },
+      "PRR": {
+        "method": "PRR (Comparator)",
+        "n_evaluated": 66,
+        "n_positives": 39,
+        "n_negatives": 27,
+        "prevalence": 0.5909090909090909,
+        "pr_auc": 0.9362055821766695,
+        "pr_auc_95ci": [
+          0.8664876906560515,
+          0.9795843312576532
+        ],
+        "roc_auc": 0.905982905982906,
+        "roc_auc_95ci": [
+          0.8242890695573621,
+          0.9682703285181733
+        ],
+        "precision_at_k": {
+          "P@5": 1.0,
+          "P@10": 1.0,
+          "P@20": 0.95,
+          "P@30": 0.9
+        },
+        "recall_at_k": {
+          "R@5": 0.1282051282051282,
+          "R@10": 0.2564102564102564,
+          "R@20": 0.48717948717948717,
+          "R@30": 0.6923076923076923
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 38,
+            "fp": 15,
+            "tn": 12,
+            "fn": 1,
+            "sensitivity": 0.9743589743589743,
+            "specificity": 0.4444444444444444,
+            "ppv_precision": 0.7169811320754716
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 36,
+            "fp": 7,
+            "tn": 20,
+            "fn": 3,
+            "sensitivity": 0.9230769230769231,
+            "specificity": 0.7407407407407407,
+            "ppv_precision": 0.8372093023255814
+          }
+        }
+      },
+      "ROR": {
+        "method": "ROR (Comparator)",
+        "n_evaluated": 66,
+        "n_positives": 39,
+        "n_negatives": 27,
+        "prevalence": 0.5909090909090909,
+        "pr_auc": 0.9375925967215787,
+        "pr_auc_95ci": [
+          0.8676418805065602,
+          0.9797283372586951
+        ],
+        "roc_auc": 0.9069325735992403,
+        "roc_auc_95ci": [
+          0.8261656746031746,
+          0.9683131407269339
+        ],
+        "precision_at_k": {
+          "P@5": 1.0,
+          "P@10": 1.0,
+          "P@20": 0.95,
+          "P@30": 0.9
+        },
+        "recall_at_k": {
+          "R@5": 0.1282051282051282,
+          "R@10": 0.2564102564102564,
+          "R@20": 0.48717948717948717,
+          "R@30": 0.6923076923076923
+        },
+        "threshold_metrics": {
+          "thresh_1.0": {
+            "threshold": 1.0,
+            "tp": 38,
+            "fp": 15,
+            "tn": 12,
+            "fn": 1,
+            "sensitivity": 0.9743589743589743,
+            "specificity": 0.4444444444444444,
+            "ppv_precision": 0.7169811320754716
+          },
+          "thresh_2.0": {
+            "threshold": 2.0,
+            "tp": 36,
+            "fp": 7,
+            "tn": 20,
+            "fn": 3,
+            "sensitivity": 0.9230769230769231,
+            "specificity": 0.7407407407407407,
+            "ppv_precision": 0.8372093023255814
+          }
+        }
+      }
+    }
+  },
+  "sensitivity_analysis": {
+    "primary_fit": {
+      "bounds": [
+        0.001,
+        10.0
+      ],
+      "hyperparameters": {
+        "alpha1": 0.001,
+        "beta1": 0.006808950259983445,
+        "alpha2": 0.28588672696109757,
+        "beta2": 0.40037082921853445,
+        "w": 0.8499041546352064,
+        "mean_comp1": 0.1468655169765378,
+        "mean_comp2": 0.714054836410302
+      },
+      "log_likelihood": -3372348.3387261317
+    },
+    "alternative_fits": {
+      "sens_alpha1_ge_0_01": {
+        "description": "Tighter lower bound (alpha1 >= 0.01)",
+        "alpha1_min_bound": 0.01,
+        "converged": true,
+        "iterations": 32,
+        "fit_time_seconds": 9.722008466720581,
+        "hyperparameters": {
+          "alpha1": 0.1573252839542405,
+          "beta1": 0.2752248752242152,
+          "alpha2": 2.8206833273110274,
+          "beta2": 0.05,
+          "w": 0.9942749192849917,
+          "mean_comp1": 0.5716245082355786,
+          "mean_comp2": 56.41366654622055
+        },
+        "log_likelihood": -3440594.533290366,
+        "delta_log_likelihood": -68246.19456423447,
+        "spearman_rank_correlation": 0.9998655324841043,
+        "pearson_correlation": 0.8820494500702181
+      },
+      "sens_alpha1_ge_0_05": {
+        "description": "openEBGM default bound (alpha1 >= 0.05)",
+        "alpha1_min_bound": 0.05,
+        "converged": true,
+        "iterations": 34,
+        "fit_time_seconds": 10.094148874282837,
+        "hyperparameters": {
+          "alpha1": 0.1573190309848082,
+          "beta1": 0.27522112704097634,
+          "alpha2": 2.820707451323436,
+          "beta2": 0.05,
+          "w": 0.9942751297144817,
+          "mean_comp1": 0.571609573277366,
+          "mean_comp2": 56.41414902646872
+        },
+        "log_likelihood": -3440594.5332871787,
+        "delta_log_likelihood": -68246.19456104701,
+        "spearman_rank_correlation": 0.9998655284033362,
+        "pearson_correlation": 0.8820496954958265
+      },
+      "sens_alpha1_ge_0_0001": {
+        "description": "Ultra-relaxed bound (alpha1 >= 0.0001)",
+        "alpha1_min_bound": 0.0001,
+        "converged": true,
+        "iterations": 32,
+        "fit_time_seconds": 10.110831260681152,
+        "hyperparameters": {
+          "alpha1": 0.15731956341792264,
+          "beta1": 0.27522162363728014,
+          "alpha2": 2.820698744029618,
+          "beta2": 0.05,
+          "w": 0.9942751003307171,
+          "mean_comp1": 0.5716104764546303,
+          "mean_comp2": 56.413974880592356
+        },
+        "log_likelihood": -3440594.5332872123,
+        "delta_log_likelihood": -68246.19456108054,
+        "spearman_rank_correlation": 0.9998655285991762,
+        "pearson_correlation": 0.8820496115120492
+      }
+    }
+  }
+}

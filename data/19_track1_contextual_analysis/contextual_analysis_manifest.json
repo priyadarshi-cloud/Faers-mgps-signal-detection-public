@@ -1,0 +1,48 @@
+{
+  "task": "TASK-T1-01: Contextual Feature Stratification and Signal-Contrast Analysis",
+  "track": "Track 1 \u2014 Scientific Validation and Publication Preparation",
+  "timestamp_utc": "2026-10-15T17:30:50.070787+00:00",
+  "status": "VERIFIED_COMPLETE",
+  "input_artifacts": {
+    "data/13_phase3c2_mgps_scoring/phase3c2_scored_candidate_pairs.csv": {
+      "sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758",
+      "row_count": 1167891
+    },
+    "data/10_phase3b_features/m1_pure_contextual_features.csv": {
+      "sha256": "ff13912020a4ae116e7cb0e39735fc4a4fa6574b3616844711b1f1a6eb133397",
+      "row_count": 1167891
+    }
+  },
+  "output_artifacts": {
+    "contextual_strata_summary.csv": {
+      "path": "data/19_track1_contextual_analysis\\contextual_strata_summary.csv",
+      "size_bytes": 6660,
+      "sha256": "cdd432d07557c50c8386b7df6d95b395ee715196cf1f96a343e78715492b6a1a"
+    },
+    "contextual_strata_tests.csv": {
+      "path": "data/19_track1_contextual_analysis\\contextual_strata_tests.csv",
+      "size_bytes": 1919,
+      "sha256": "239ee31a4b882f4d0d5f7c84004479058ff2d263ea822b127fa84b668fb96a33"
+    },
+    "signal_contrast_statistics.json": {
+      "path": "data/19_track1_contextual_analysis\\signal_contrast_statistics.json",
+      "size_bytes": 14083,
+      "sha256": "8bb6d643aa9b0c1af80590be742d20f99fdbfb23a9a6d5685a6523741f19779e"
+    },
+    "shrinkage_discordance_by_tier.csv": {
+      "path": "data/19_track1_contextual_analysis\\shrinkage_discordance_by_tier.csv",
+      "size_bytes": 1824,
+      "sha256": "772c44bd7f4ff43df0bca49e3a33c855d412f19852754f16f3fe25fa8bf10b3f"
+    },
+    "contextual_analysis_methods.md": {
+      "path": "data/19_track1_contextual_analysis\\contextual_analysis_methods.md",
+      "size_bytes": 14603,
+      "sha256": "f121d967aa85fe2f100c23a49a1302a917f11eb517be8e2e0139a71a923a7ad2"
+    },
+    "contextual_analysis_report.md": {
+      "path": "data/19_track1_contextual_analysis\\contextual_analysis_report.md",
+      "size_bytes": 22246,
+      "sha256": "318cd8cc128f872b50d94a18ab5f72557920f4a1a601837bfbb77896e9742c56"
+    }
+  }
+}

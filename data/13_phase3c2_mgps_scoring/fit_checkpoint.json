@@ -1,0 +1,192 @@
+{
+  "converged": true,
+  "timestamp_utc": "2026-10-11T15:33:40Z",
+  "truncated_at": 2,
+  "input_sha256": "1ba9e480ad1d5783e036b395460a5b763d57df565a686b02c081cc9ff0742cec",
+  "n_pairs": 1167891,
+  "n_bins": 61709,
+  "binning_method": "logarithmic_decimals_2",
+  "squash_time_seconds": 0.23467040061950684,
+  "fit_time_seconds": 262.5502712726593,
+  "hyperparameters": [
+    0.001,
+    0.006808950259983445,
+    0.28588672696109757,
+    0.40037082921853445,
+    0.8499041546352064
+  ],
+  "hyperparameters_dict": {
+    "alpha1": 0.001,
+    "beta1": 0.006808950259983445,
+    "alpha2": 0.28588672696109757,
+    "beta2": 0.40037082921853445,
+    "w": 0.8499041546352064,
+    "mean_comp1": 0.1468655169765378,
+    "mean_comp2": 0.714054836410302
+  },
+  "log_likelihood": -3372348.3387261317,
+  "iterations": 103,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "starting_point": [
+    0.2339,
+    0.3354,
+    2.2487,
+    0.05,
+    0.99
+  ],
+  "standard_errors": {
+    "alpha1_se": 6.768018068729873e-05,
+    "beta1_se": 4.347550105350642e-05,
+    "alpha2_se": 0.002643220868200269,
+    "beta2_se": 0.0021154305267963858,
+    "w_se": 0.008722595917727545
+  },
+  "all_restarts": [
+    {
+      "start": [
+        0.2339,
+        0.3354,
+        2.2487,
+        0.05,
+        0.99
+      ],
+      "success": true,
+      "fun": 3372348.3387261317,
+      "nit": 103,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.28588672696109757,
+        0.40037082921853445,
+        0.001,
+        0.006808950259983445,
+        0.15009584536479362
+      ]
+    },
+    {
+      "start": [
+        0.2,
+        0.1,
+        2.0,
+        4.0,
+        0.3333
+      ],
+      "success": true,
+      "fun": 3454579.2800279954,
+      "nit": 18,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.012061772514744898,
+        0.02384821515315493,
+        2.9213015342480806,
+        3.82024264980386,
+        0.8823537639095093
+      ]
+    },
+    {
+      "start": [
+        1.0,
+        1.0,
+        2.0,
+        1.0,
+        0.2
+      ],
+      "success": true,
+      "fun": 3616548.5189155624,
+      "nit": 19,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.001,
+        100.0,
+        0.001,
+        0.05285366496344349,
+        0.0001
+      ]
+    },
+    {
+      "start": [
+        0.05,
+        0.5,
+        3.0,
+        1.0,
+        0.05
+      ],
+      "success": true,
+      "fun": 3372399.9488152387,
+      "nit": 42,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.002053610568785769,
+        0.006889904811047487,
+        0.2784155759834076,
+        0.4007070004675478,
+        0.7316780100737039
+      ]
+    },
+    {
+      "start": [
+        0.5,
+        1.5,
+        1.5,
+        0.5,
+        0.5
+      ],
+      "success": true,
+      "fun": 3372348.3387659425,
+      "nit": 116,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.2858849338890916,
+        0.400367098368232,
+        0.001,
+        0.006809101122724189,
+        0.15009092342111366
+      ]
+    },
+    {
+      "start": [
+        0.18,
+        0.53,
+        2.14,
+        0.57,
+        0.18
+      ],
+      "success": true,
+      "fun": 3372353.9799789637,
+      "nit": 116,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.0011606406008527281,
+        0.006812228809304393,
+        0.2868315088117186,
+        0.3998390316840331,
+        0.8305577749954632
+      ]
+    },
+    {
+      "start": [
+        1.1,
+        0.5,
+        0.5,
+        0.01,
+        0.75
+      ],
+      "success": true,
+      "fun": 3391473.043137756,
+      "nit": 24,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "params": [
+        0.5101278892833332,
+        0.8226753829495387,
+        0.04908266382705462,
+        0.011062009016608015,
+        0.7666914297678876
+      ]
+    }
+  ],
+  "environment": {
+    "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "scipy_version": "unknown",
+    "numpy_version": "2.5.3",
+    "pandas_version": "3.0.6"
+  }
+}

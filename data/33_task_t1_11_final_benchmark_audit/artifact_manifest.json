@@ -1,0 +1,36 @@
+{
+  "task": "TASK-T1-11",
+  "task_description": "Final Benchmark Audit and Evidence-Controlled Manuscript Integration",
+  "output_directory": "data/33_task_t1_11_final_benchmark_audit",
+  "created_at": "2026-10-17T19:48:00+05:30",
+  "artifacts": {
+    "final_benchmark_audit_report.md": {
+      "size_bytes": 15699,
+      "sha256": "024d0fb2ee16287db0aeace9f5275e58c866f244e58b2525b76195f1f23305d0"
+    },
+    "independently_recomputed_statistics.csv": {
+      "size_bytes": 4372,
+      "sha256": "43e610abff09a0b2acaa20d41b12883ed2d5fe0ee17d404ba1f9afcbabd34c52"
+    },
+    "population_provenance_findings.csv": {
+      "size_bytes": 4969,
+      "sha256": "742546ff048010ca291438d275a69267f3afa28524355c5e5aa46aa99a2c11a0"
+    },
+    "manuscript_change_log.csv": {
+      "size_bytes": 5510,
+      "sha256": "9741d8b348387062dc80532d36b530040269026705dfa7008fd3d4c4fa5a6b76"
+    },
+    "manuscript_final_audited.md": {
+      "size_bytes": 36734,
+      "sha256": "e17de5f77cd278268fc7238bda9a0ab6d21b36f803ea3c4af0ab61e791a38076"
+    },
+    "claims_traceability_final.csv": {
+      "size_bytes": 6646,
+      "sha256": "3e34d348a65832fde6f992ce0d65ad8cd1ca708c0344f8d485a379621a56f650"
+    },
+    "validation_script.py": {
+      "size_bytes": 12734,
+      "sha256": "1bd51378be47eb0657f572a7761005f666ea9944e2be050ebd2fe74db5fd46c4"
+    }
+  }
+}

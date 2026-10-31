@@ -1,0 +1,17 @@
+table,field,code,dictionary_meaning,implemented_mapping,corrected_mapping,scientific_rationale,source_evidence,cohort_case_count_n,cohort_pct
+DEMO,occp_cod,MD,Physician,hp_occupations,hp_occupations,Clinical healthcare practitioner with prescribing authority,FDA FAERS Data Dictionary (DEMO table definition),1318291,21.950
+DEMO,occp_cod,PH,Pharmacist,hp_occupations,hp_occupations,Clinical healthcare practitioner with medication dispensing and pharmacotherapy expertise,FDA FAERS Data Dictionary (DEMO table definition),413742,6.889
+DEMO,occp_cod,RN,Registered Nurse,hp_occupations,hp_occupations,Clinical healthcare practitioner involved in patient monitoring and medication administration,FDA FAERS Data Dictionary (DEMO table definition),2354,0.039
+DEMO,occp_cod,HP,Health Professional (generic),hp_occupations,hp_occupations,Generic health professional designation in DEMO,FDA FAERS Data Dictionary (DEMO table definition),0,0.000
+DEMO,occp_cod,LW,Lawyer / Attorney,hp_occupations,EXCLUDED (Non-HP / Legal),Legal representative typically filing in product liability or litigation contexts; not a healthcare clinical professional,FDA FAERS Data Dictionary (DEMO table occp_cod: 'LW = Lawyer'),85337,1.421
+DEMO,occp_cod,CN,Consumer,csm_occupations,csm_occupations,Direct patient or family non-health professional reporter,FDA FAERS Data Dictionary (DEMO table occp_cod: 'CN = Consumer'),2940798,48.966
+DEMO,occp_cod,CSM,Consumer Safety Monitor (legacy),csm_occupations,csm_occupations,Legacy coding variant representing consumer reporting channel,FAERS legacy ASCII quarter coding notes,0,0.000
+DEMO,occp_cod,OT,Other,EXCLUDED (0.0),EXCLUDED (0.0),Unclassified or unspecified occupation; does not meet specific HP or Consumer definition,FDA FAERS Data Dictionary (DEMO table occp_cod: 'OT = Other'),1089005,18.132
+DEMO,occp_cod,NULL,Missing / Unrecorded,EXCLUDED (0.0),EXCLUDED (0.0),Unrecorded occupation field; defaults to 0.0 in both numerators,FAERS database null entry,156310,2.603
+DEMO,occp_cod,SALES,Manufacturer Sales Representative,EXCLUDED (0.0),EXCLUDED (0.0),Free-text/non-standard occupation entry; non-clinical commercial representative,FAERS database free-text entry,2,0.000
+RPSR,rpsr_cod,HP,Health Professional,hp_cases,hp_cases,Report origin transmitted by health professional source,FDA FAERS Data Dictionary (RPSR table definition),224809,3.743
+RPSR,rpsr_cod,CSM,Consumer,csm_cases,csm_cases,Report origin transmitted by consumer or patient non-health professional source,FDA FAERS Data Dictionary (RPSR table definition),188612,3.140
+RPSR,rpsr_cod,OT,Other,EXCLUDED (0.0),EXCLUDED (0.0),Transmission origin designated as other,FDA FAERS Data Dictionary (RPSR table definition),11354,0.189
+RPSR,rpsr_cod,FGN,Foreign,EXCLUDED (0.0),EXCLUDED (0.0),Foreign regulatory or health authority transmission,FDA FAERS Data Dictionary (RPSR table definition),42203,0.703
+RPSR,rpsr_cod,LIT,Literature,EXCLUDED (0.0),EXCLUDED (0.0),Scientific literature source transmission,FDA FAERS Data Dictionary (RPSR table definition),89504,1.490
+RPSR,rpsr_cod,STD,Study,EXCLUDED (0.0),EXCLUDED (0.0),Clinical trial or post-marketing surveillance study transmission,FDA FAERS Data Dictionary (RPSR table definition),12739,0.212

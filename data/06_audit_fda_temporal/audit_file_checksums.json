@@ -1,0 +1,18 @@
+{
+  "drug_coverage_concentration.csv": {
+    "bytes": 515493,
+    "sha256": "9a23b1655a46e9c1b0a07da6384cb11579f16b45747e6352afaa75160febacdd"
+  },
+  "faers_quarterly_inventory.csv": {
+    "bytes": 4108,
+    "sha256": "4f7c34cb7aa3eeacfff8b932e29d8b90b0c50a54a68226c8f28ce421a60edeb1"
+  },
+  "fda_historical_label_and_temporal_coverage_report.md": {
+    "bytes": 23441,
+    "sha256": "92888cf61cc83c82f0c9809f7128d7f54e88d19e2efe0ff4e0ec75b2637978dd"
+  },
+  "fda_temporal_audit_summary.json": {
+    "bytes": 9203,
+    "sha256": "3708be8a251acf09342935957c5aa9fe5b02454ce5d68789c03c2a1c9fa0e508"
+  }
+}

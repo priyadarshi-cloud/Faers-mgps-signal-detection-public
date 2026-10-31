@@ -1,0 +1,14 @@
+# FAERS Signal Detection Repository — Git Attributes
+# Enforce consistent line endings across platforms
+* text=auto
+
+# Markdown files use intentional trailing double-spaces for hard line breaks.
+# Suppress the trailing-whitespace check for .md files to avoid false positives.
+*.md whitespace=-trailing-space
+
+# Binary data files — do not attempt text conversion
+*.gz binary
+*.rda binary
+*.pkl binary
+*.pickle binary
+*.parquet binary

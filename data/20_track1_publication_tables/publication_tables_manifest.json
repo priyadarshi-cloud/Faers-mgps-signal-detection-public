@@ -1,0 +1,67 @@
+{
+  "task": "TASK-T1-02: Publication Tables 1-4 Assembly and Validation",
+  "track": "Track 1 \u2014 Scientific Validation and Publication Preparation",
+  "timestamp_utc": "2026-10-15T17:40:39.636405+00:00",
+  "status": "VERIFIED_COMPLETE",
+  "validation_summary": {
+    "total_checks": 48,
+    "checks_passed": 48,
+    "checks_failed": 0,
+    "status": "ALL_CHECKS_PASSED"
+  },
+  "input_artifacts": {
+    "data/09_phase3a4_dual_snapshots/reconciliation_summary.json": {
+      "sha256": "90f9e31d798be1288c5ef92a0e28d8b2d186c678a1f464ea491f6920ad5113ae"
+    },
+    "data/10_phase3b_features/phase3b_feature_manifest.json": {
+      "sha256": "044955747683935db5fead4dfa3fc5f8dfc207d67f56cf86050523d4e73db63a"
+    },
+    "data/13_phase3c2_mgps_scoring/fit_checkpoint.json": {
+      "sha256": "db29885369d437d52a0c90c8a216df5c940399641982eb6437d35742f8369d57"
+    },
+    "data/13_phase3c2_mgps_scoring/phase3c2_summary_metrics.json": {
+      "sha256": "09ca09730729f70678ba3745d2961a545f48f637aa600c6f331df1b465dc6e3d"
+    },
+    "data/14_phase3d_benchmark_evaluation/phase3d_benchmark_evaluation_results.json": {
+      "sha256": "45a557b4916a04870f074744d038ea15a9a83eb425712f277ca94fa2d9d15e21"
+    },
+    "data/19_track1_contextual_analysis/contextual_strata_summary.csv": {
+      "sha256": "cdd432d07557c50c8386b7df6d95b395ee715196cf1f96a343e78715492b6a1a"
+    },
+    "data/19_track1_contextual_analysis/contextual_strata_tests.csv": {
+      "sha256": "239ee31a4b882f4d0d5f7c84004479058ff2d263ea822b127fa84b668fb96a33"
+    }
+  },
+  "output_artifacts": {
+    "table1_study_population.csv": {
+      "path": "data/20_track1_publication_tables\\table1_study_population.csv",
+      "size_bytes": 3222,
+      "sha256": "12e17fd245ada646859924810b9585ff936d8bd48eb03caf2ae6c402b46e2992"
+    },
+    "table2_mgps_fit_sensitivity.csv": {
+      "path": "data/20_track1_publication_tables\\table2_mgps_fit_sensitivity.csv",
+      "size_bytes": 5023,
+      "sha256": "fb7aaff77d069e07c6fdf0ab2cbfd1536688bea4106b681b9d78c040994e86e0"
+    },
+    "table3_benchmark_performance.csv": {
+      "path": "data/20_track1_publication_tables\\table3_benchmark_performance.csv",
+      "size_bytes": 2950,
+      "sha256": "19936c143b7ff59d089019c19a2fd0e91eeb01cee6f6bbe76c70ebb81037abee"
+    },
+    "table4_contextual_strata.csv": {
+      "path": "data/20_track1_publication_tables\\table4_contextual_strata.csv",
+      "size_bytes": 3306,
+      "sha256": "660efdde6ee5f23a803d3a76a563b0e69b15e0a4d9759a8efa262b06db324da5"
+    },
+    "publication_tables_methods.md": {
+      "path": "data/20_track1_publication_tables\\publication_tables_methods.md",
+      "size_bytes": 11226,
+      "sha256": "193f900476c95cfba7d7c333efd04b1b22018b57bc5278b12ee4bf12d45f60ac"
+    },
+    "publication_tables_audit_report.md": {
+      "path": "data/20_track1_publication_tables\\publication_tables_audit_report.md",
+      "size_bytes": 21815,
+      "sha256": "6d54fa0e099c2fdae704a558688f73222b18dde81cdfd3f18c22d2f67c269386"
+    }
+  }
+}

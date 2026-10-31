@@ -1,0 +1,31 @@
+{
+  "M1_contextual": {
+    "train_r2": 0.2362,
+    "test_r2": 0.23,
+    "train_rmse": 1.4705,
+    "test_rmse": 1.4763,
+    "n_train": 934312,
+    "n_test": 233579,
+    "n_total": 1167891,
+    "n_imputed": 373234,
+    "fit_time_s": 93.3,
+    "algorithm": "sklearn.RandomForestRegressor",
+    "n_estimators": 100,
+    "max_depth": 10,
+    "note": "Reconstructed from task-1246 log (metrics file not found)"
+  },
+  "M2_multimodal": {
+    "train_r2": 0.999208,
+    "test_r2": 0.999125,
+    "train_rmse": 0.047364,
+    "test_rmse": 0.049763,
+    "n_train": 934312,
+    "n_test": 233579,
+    "n_total": 1167891,
+    "n_imputed": 373234,
+    "fit_time_s": 132.79,
+    "algorithm": "sklearn.RandomForestRegressor",
+    "n_estimators": 100,
+    "max_depth": 10
+  }
+}

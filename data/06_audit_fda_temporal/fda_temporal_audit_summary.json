@@ -1,0 +1,377 @@
+{
+  "audit_name": "FDA Historical-Label and Continuous FAERS Temporal Coverage Feasibility Audit",
+  "audit_timestamp": "2026-10-10",
+  "candidate_universe": {
+    "total_candidate_pairs": 519748,
+    "total_distinct_drugs": 6905,
+    "total_case_volume": 6981089
+  },
+  "drug_concentration_benchmarks": {
+    "top_25": {
+      "drug_count": 25,
+      "pairs_covered": 48948,
+      "pairs_percentage": 9.42,
+      "case_volume_covered": 1589933,
+      "case_volume_percentage": 22.77
+    },
+    "top_50": {
+      "drug_count": 50,
+      "pairs_covered": 81970,
+      "pairs_percentage": 15.77,
+      "case_volume_covered": 2378289,
+      "case_volume_percentage": 34.07
+    },
+    "top_100": {
+      "drug_count": 100,
+      "pairs_covered": 135610,
+      "pairs_percentage": 26.09,
+      "case_volume_covered": 3366234,
+      "case_volume_percentage": 48.22
+    },
+    "top_150": {
+      "drug_count": 150,
+      "pairs_covered": 178534,
+      "pairs_percentage": 34.35,
+      "case_volume_covered": 4055973,
+      "case_volume_percentage": 58.1
+    },
+    "top_200": {
+      "drug_count": 200,
+      "pairs_covered": 212744,
+      "pairs_percentage": 40.93,
+      "case_volume_covered": 4553392,
+      "case_volume_percentage": 65.22
+    },
+    "top_250": {
+      "drug_count": 250,
+      "pairs_covered": 240954,
+      "pairs_percentage": 46.36,
+      "case_volume_covered": 4872099,
+      "case_volume_percentage": 69.79
+    },
+    "top_500": {
+      "drug_count": 500,
+      "pairs_covered": 331871,
+      "pairs_percentage": 63.85,
+      "case_volume_covered": 5814199,
+      "case_volume_percentage": 83.28
+    },
+    "top_1000": {
+      "drug_count": 1000,
+      "pairs_covered": 419041,
+      "pairs_percentage": 80.62,
+      "case_volume_covered": 6491136,
+      "case_volume_percentage": 92.98
+    }
+  },
+  "top_25_drugs_profile": [
+    {
+      "rank": 1,
+      "canonical_drug": "adalimumab",
+      "pair_count": 4078,
+      "pair_pct": 0.785,
+      "case_volume": 272949,
+      "case_pct": 3.91
+    },
+    {
+      "rank": 2,
+      "canonical_drug": "methotrexate",
+      "pair_count": 3030,
+      "pair_pct": 0.583,
+      "case_volume": 133501,
+      "case_pct": 1.912
+    },
+    {
+      "rank": 3,
+      "canonical_drug": "infliximab",
+      "pair_count": 2817,
+      "pair_pct": 0.542,
+      "case_volume": 147361,
+      "case_pct": 2.111
+    },
+    {
+      "rank": 4,
+      "canonical_drug": "prednisone",
+      "pair_count": 2752,
+      "pair_pct": 0.529,
+      "case_volume": 87916,
+      "case_pct": 1.259
+    },
+    {
+      "rank": 5,
+      "canonical_drug": "rituximab",
+      "pair_count": 2600,
+      "pair_pct": 0.5,
+      "case_volume": 100442,
+      "case_pct": 1.439
+    },
+    {
+      "rank": 6,
+      "canonical_drug": "etanercept",
+      "pair_count": 2409,
+      "pair_pct": 0.463,
+      "case_volume": 135608,
+      "case_pct": 1.943
+    },
+    {
+      "rank": 7,
+      "canonical_drug": "dexamethasone",
+      "pair_count": 1880,
+      "pair_pct": 0.362,
+      "case_volume": 33660,
+      "case_pct": 0.482
+    },
+    {
+      "rank": 8,
+      "canonical_drug": "prednisolone",
+      "pair_count": 1846,
+      "pair_pct": 0.355,
+      "case_volume": 22027,
+      "case_pct": 0.316
+    },
+    {
+      "rank": 9,
+      "canonical_drug": "secukinumab",
+      "pair_count": 1755,
+      "pair_pct": 0.338,
+      "case_volume": 64488,
+      "case_pct": 0.924
+    },
+    {
+      "rank": 10,
+      "canonical_drug": "methylprednisolone",
+      "pair_count": 1742,
+      "pair_pct": 0.335,
+      "case_volume": 26083,
+      "case_pct": 0.374
+    },
+    {
+      "rank": 11,
+      "canonical_drug": "tofacitinib",
+      "pair_count": 1733,
+      "pair_pct": 0.333,
+      "case_volume": 72634,
+      "case_pct": 1.04
+    },
+    {
+      "rank": 12,
+      "canonical_drug": "cyclophosphamide",
+      "pair_count": 1728,
+      "pair_pct": 0.332,
+      "case_volume": 30356,
+      "case_pct": 0.435
+    },
+    {
+      "rank": 13,
+      "canonical_drug": "tocilizumab",
+      "pair_count": 1684,
+      "pair_pct": 0.324,
+      "case_volume": 76787,
+      "case_pct": 1.1
+    },
+    {
+      "rank": 14,
+      "canonical_drug": "aspirin",
+      "pair_count": 1681,
+      "pair_pct": 0.323,
+      "case_volume": 27290,
+      "case_pct": 0.391
+    },
+    {
+      "rank": 15,
+      "canonical_drug": "tacrolimus",
+      "pair_count": 1673,
+      "pair_pct": 0.322,
+      "case_volume": 20882,
+      "case_pct": 0.299
+    },
+    {
+      "rank": 16,
+      "canonical_drug": "mycophenolate mofetil",
+      "pair_count": 1663,
+      "pair_pct": 0.32,
+      "case_volume": 27094,
+      "case_pct": 0.388
+    },
+    {
+      "rank": 17,
+      "canonical_drug": "acetaminophen",
+      "pair_count": 1617,
+      "pair_pct": 0.311,
+      "case_volume": 55205,
+      "case_pct": 0.791
+    },
+    {
+      "rank": 18,
+      "canonical_drug": "pantoprazole",
+      "pair_count": 1600,
+      "pair_pct": 0.308,
+      "case_volume": 46645,
+      "case_pct": 0.668
+    },
+    {
+      "rank": 19,
+      "canonical_drug": "metformin",
+      "pair_count": 1569,
+      "pair_pct": 0.302,
+      "case_volume": 29301,
+      "case_pct": 0.42
+    },
+    {
+      "rank": 20,
+      "canonical_drug": "amlodipine",
+      "pair_count": 1551,
+      "pair_pct": 0.298,
+      "case_volume": 28237,
+      "case_pct": 0.404
+    },
+    {
+      "rank": 21,
+      "canonical_drug": "human immunoglobulin g",
+      "pair_count": 1547,
+      "pair_pct": 0.298,
+      "case_volume": 26890,
+      "case_pct": 0.385
+    },
+    {
+      "rank": 22,
+      "canonical_drug": "omalizumab",
+      "pair_count": 1530,
+      "pair_pct": 0.294,
+      "case_volume": 45384,
+      "case_pct": 0.65
+    },
+    {
+      "rank": 23,
+      "canonical_drug": "cyclosporine",
+      "pair_count": 1515,
+      "pair_pct": 0.291,
+      "case_volume": 22897,
+      "case_pct": 0.328
+    },
+    {
+      "rank": 24,
+      "canonical_drug": "zometa",
+      "pair_count": 1491,
+      "pair_pct": 0.287,
+      "case_volume": 17695,
+      "case_pct": 0.253
+    },
+    {
+      "rank": 25,
+      "canonical_drug": "lenalidomide",
+      "pair_count": 1457,
+      "pair_pct": 0.28,
+      "case_volume": 38601,
+      "case_pct": 0.553
+    }
+  ],
+  "quarterly_coverage_inventory": {
+    "total_timeline_quarters": 40,
+    "ingested_count": 3,
+    "ingested_quarters": [
+      "2014q1",
+      "2019q1",
+      "2023q1"
+    ],
+    "missing_count": 37,
+    "missing_quarters": [
+      "2014q2",
+      "2014q3",
+      "2014q4",
+      "2015q1",
+      "2015q2",
+      "2015q3",
+      "2015q4",
+      "2016q1",
+      "2016q2",
+      "2016q3",
+      "2016q4",
+      "2017q1",
+      "2017q2",
+      "2017q3",
+      "2017q4",
+      "2018q1",
+      "2018q2",
+      "2018q3",
+      "2018q4",
+      "2019q2",
+      "2019q3",
+      "2019q4",
+      "2020q1",
+      "2020q2",
+      "2020q3",
+      "2020q4",
+      "2021q1",
+      "2021q2",
+      "2021q3",
+      "2021q4",
+      "2022q1",
+      "2022q2",
+      "2022q3",
+      "2022q4",
+      "2023q2",
+      "2023q3",
+      "2023q4"
+    ],
+    "gap_1_quarters": [
+      "2014Q2",
+      "2014Q3",
+      "2014Q4",
+      "2015Q1",
+      "2015Q2",
+      "2015Q3",
+      "2015Q4",
+      "2016Q1",
+      "2016Q2",
+      "2016Q3",
+      "2016Q4",
+      "2017Q1",
+      "2017Q2",
+      "2017Q3",
+      "2017Q4",
+      "2018Q1",
+      "2018Q2",
+      "2018Q3",
+      "2018Q4"
+    ],
+    "gap_2_quarters": [
+      "2019Q2",
+      "2019Q3",
+      "2019Q4",
+      "2020Q1",
+      "2020Q2",
+      "2020Q3",
+      "2020Q4",
+      "2021Q1",
+      "2021Q2",
+      "2021Q3",
+      "2021Q4",
+      "2022Q1",
+      "2022Q2",
+      "2022Q3",
+      "2022Q4"
+    ],
+    "gap_3_quarters": [
+      "2023Q2",
+      "2023Q3",
+      "2023Q4"
+    ],
+    "total_estimated_download_gb": 1.76,
+    "total_estimated_uncompressed_gb": 9.71
+  },
+  "decision_matrix": {
+    "historical_label_construction": {
+      "decision": "NO-GO",
+      "primary_blocker": "Drugs@FDA contains only document action metadata (PDF letters), not structured MedDRA adverse reaction tables; FDA SrLC only covers Jan 2016-present with narrative text and Akamai anti-bot blocking; zero verified historical positive labels exist in the workspace."
+    },
+    "continuous_faers_coverage": {
+      "decision": "CONDITIONAL GO",
+      "condition": "Feasible to download 37 missing quarters (~2.0 GB compressed, ~11 GB uncompressed) via official FDA FIS URLs, but requires out-of-core chunked processing and explicit user approval before execution."
+    },
+    "model_training": {
+      "decision": "NO-GO",
+      "primary_blocker": "Cannot train without defensible, dated historical positive labels. Positive-Unlabeled learning is blocked because P is currently empty (N_P = 0). A targeted cohort of 100-250 drugs covers only 26-46% of pairs and introduces extreme immunosuppressive/biologic spectrum bias."
+    }
+  }
+}

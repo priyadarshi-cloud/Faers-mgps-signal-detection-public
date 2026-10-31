@@ -1,0 +1,11 @@
+{
+  "cutoff_date": "2018-12-31",
+  "generated_at": "2026-10-11T03:11:34.393581",
+  "as_of_2018_case_count": 6012891,
+  "retrospectively_corrected_case_count": 5987173,
+  "cases_excluded_solely_by_retrospective_deletions": 25718,
+  "expected_cases_excluded_from_phase3a3": 25718,
+  "reconciliation_matches_audit": true,
+  "as_of_2018_sha256": "954aa954df4cae71803f6c5f3e1b40f32aa16291d8165af096046af3e51f7ab0",
+  "retrospectively_corrected_sha256": "a87e142c24c9958de2c3dcd8eb7c7a27cec032c1e064426e6d259106b15dfb8f"
+}

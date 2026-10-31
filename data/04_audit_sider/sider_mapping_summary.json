@@ -1,0 +1,47 @@
+{
+  "sider_metadata": {
+    "version": "4.1",
+    "release_date": "2015-10-21",
+    "official_url": "https://sideeffects.embl.de/",
+    "publication": "Kuhn et al., Nucleic Acids Res. 2016, 44(D1):D1075-D1079",
+    "license": "Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)",
+    "contains_per_association_evidence_dates": false
+  },
+  "source_associations_examined": 309849,
+  "sider_pt_associations": 145321,
+  "unique_sider_drug_pt_pairs": 140677,
+  "candidate_pair_universe": 519748,
+  "terminology_mapping_audit": {
+    "faers_unique_drugs": 6904,
+    "sider_unique_drugs": 1344,
+    "drug_identifiers_mapped_successfully": 957,
+    "drug_coverage_percentage_of_faers": 13.86,
+    "faers_unique_pts": 10098,
+    "sider_unique_pts": 4251,
+    "adr_terms_mapped_successfully": 3743,
+    "adr_coverage_percentage_of_faers": 37.07
+  },
+  "candidate_pair_classification": {
+    "VERIFIED_HISTORICAL_POSITIVE": 0,
+    "UNVERIFIED_POSITIVE_CANDIDATE": 36380,
+    "AMBIGUOUS_MAPPING": 3790,
+    "UNLISTED_UNKNOWN": 479578
+  },
+  "ambiguous_mapping_breakdown": {
+    "AMBIGUOUS_DRUG_IDENTIFIER_OR_MULTI_CID": 2081,
+    "INDICATION_CONFOUNDING_COLLISION": 1539,
+    "AMBIGUOUS_DRUG_IDENTIFIER_OR_MULTI_CID; INDICATION_CONFOUNDING_COLLISION": 170
+  },
+  "temporal_evaluation_critique": {
+    "sider_release_date": "2015-10-21",
+    "target_training_cutoff": "2018-12-31",
+    "release_date_vs_evidence_date_distinction": "SIDER release date precedes 2018-12-31, but individual associations lack historical evidence timestamps.",
+    "associations_with_independently_verified_dates_le_2018": 0,
+    "three_quarter_sample_sufficiency": "INSUFFICIENT for continuous longitudinal backtesting due to 4-5 year voids; SUFFICIENT only as architectural pipeline prototype."
+  },
+  "decision_recommendation": {
+    "recommendation": "NO-GO for positive-unlabeled learning using uncurated SIDER 4.1",
+    "scientific_justification": "SIDER 4.1 provides zero per-association evidence dates, covers only 13.9% of FAERS drugs, exhibits indication confounding (3,082 pairs), and multi-CID ambiguity. Constructing a positive set without dated evidence risks NLP noise and unverified evidence status.",
+    "proposed_smallest_methodological_revision": "Ingest structured FDA Drug Safety-related Labeling Changes (SrLC) database (2016-present) and Drugs@FDA original approval records to establish verified approval dates for a targeted high-reporting drug cohort."
+  }
+}

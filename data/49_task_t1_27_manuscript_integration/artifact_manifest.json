@@ -1,0 +1,55 @@
+{
+  "task": "TASK-T1-27 \u2014 Controlled Manuscript Integration",
+  "timestamp": "2026-10-18T11:06:05.666708+00:00",
+  "validation_status": "ALL_VALIDATION_CHECKS_PASSED",
+  "original_manuscript_preserved": {
+    "path": "data/41_task_t1_19_residual_claim_check/manuscript_coauthor_review_candidate.md",
+    "bytes": 40216,
+    "sha256": "dca6074876c1cf35a24e11bd80020678842b1100464090c3c638973e45208ae0",
+    "unmodified": true
+  },
+  "artifacts": [
+    {
+      "filename": "manuscript_revised_candidate.md",
+      "path": "data/49_task_t1_27_manuscript_integration/manuscript_revised_candidate.md",
+      "bytes": 44711,
+      "sha256": "ea130d18c328b5f33371acef3c3e20ad9eb4447bdfee719181654c7a01c222d6",
+      "created_at": "2026-10-18T11:06:05.663875+00:00"
+    },
+    {
+      "filename": "manuscript_change_log.md",
+      "path": "data/49_task_t1_27_manuscript_integration/manuscript_change_log.md",
+      "bytes": 17280,
+      "sha256": "64e7dc2b4f46c6fdecca4dfa50b148a9ffcdd15642a69a200a096170d59d261c",
+      "created_at": "2026-10-18T11:06:05.664059+00:00"
+    },
+    {
+      "filename": "numerical_invariance_audit.csv",
+      "path": "data/49_task_t1_27_manuscript_integration/numerical_invariance_audit.csv",
+      "bytes": 10247,
+      "sha256": "1216f1dace32fc51f60af83df50d0ac0b1f55ff4715cea40e365da7a6ee223c1",
+      "created_at": "2026-10-18T11:06:05.664323+00:00"
+    },
+    {
+      "filename": "supplementary_table_s1.csv",
+      "path": "data/49_task_t1_27_manuscript_integration/supplementary_table_s1.csv",
+      "bytes": 10054,
+      "sha256": "afcb184ef796a98da07bcde2acb8fc8263fddba5af6eb92dcc24bbcf4932fd34",
+      "created_at": "2026-10-18T11:06:05.666109+00:00"
+    },
+    {
+      "filename": "final_validation_report.md",
+      "path": "data/49_task_t1_27_manuscript_integration/final_validation_report.md",
+      "bytes": 8547,
+      "sha256": "3637976c9f9edc4931d801f7a9c46ab085ac9d71d0fb79c465046f3efa9a2384",
+      "created_at": "2026-10-18T11:06:05.666318+00:00"
+    },
+    {
+      "filename": "remaining_publication_blockers.md",
+      "path": "data/49_task_t1_27_manuscript_integration/remaining_publication_blockers.md",
+      "bytes": 3981,
+      "sha256": "6b0c4aa67163990828e29d4f06e067b0c901bfd9954cbee3650328addec2e155",
+      "created_at": "2026-10-18T11:06:05.666487+00:00"
+    }
+  ]
+}

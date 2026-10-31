@@ -1,0 +1,19 @@
+{
+  "total_raw_demo_reports": 15428448,
+  "cumulative_deleted_caseids": 177987,
+  "purged_deleted_reports": 82634,
+  "active_retained_reports": 15345814,
+  "unique_patient_cases_n": 13311280,
+  "single_version_cases": 11794609,
+  "multi_version_cases": 1516671,
+  "total_followup_reports": 2034534,
+  "temporal_partitions": {
+    "historical_cutoff_date": "2018-12-31",
+    "pre_cutoff_total_reports": 6892191,
+    "pre_cutoff_unique_cases": 6013097,
+    "pre_cutoff_valid_version_reports_as_of_20181231": 6560907,
+    "pre_cutoff_subsequent_followup_versions_post_2018": 331284,
+    "post_cutoff_total_reports": 8453623,
+    "post_cutoff_unique_cases": 7298185
+  }
+}

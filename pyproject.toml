@@ -1,0 +1,4 @@
+[tool.pyrefly]
+preset = "basic"
+search-path = [".", "scripts"]
+python-interpreter-path = ".venv/Scripts/python.exe"

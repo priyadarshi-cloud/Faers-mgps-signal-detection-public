@@ -1,0 +1,12 @@
+feature,test_type,k_groups,n_observations,degrees_of_freedom,h_statistic,p_value_raw,epsilon_squared,eta_squared_h,practical_magnitude,p_value_fdr_bh,statistically_significant_005
+mean_age,Kruskal-Wallis omnibus H-test,5,1092092,4,9951.087961991883,0.0,0.009111958584029979,0.009108329246655151,Negligible (<0.01),0.0,True
+median_age,Kruskal-Wallis omnibus H-test,5,1092092,4,8579.873112710759,0.0,0.00785637196232801,0.00785273802610118,Negligible (<0.01),0.0,True
+age_std,Kruskal-Wallis omnibus H-test,5,946255,4,10084.739173643782,0.0,0.010657539279774544,0.010653357118778106,Small (0.01-0.06),0.0,True
+age_missing_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,155.39815332303647,1.4180429790311135e-32,0.00013305889537802059,0.0001296343592808172,Negligible (<0.01),1.4180429790311135e-32,True
+female_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,3136.5541998003346,0.0,0.0026856589231865455,0.0026822431297235643,Negligible (<0.01),0.0,True
+male_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,734.2383159866379,1.3432718155937298e-157,0.0006286879038151178,0.0006252650652432154,Negligible (<0.01),1.477598997153103e-157,True
+hp_reporter_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,4303.355339753626,0.0,0.0036847265921907254,0.003681314220526341,Negligible (<0.01),0.0,True
+csm_reporter_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,21275.847614376074,0.0,0.018217338631528718,0.01821397603394173,Small (0.01-0.06),0.0,True
+monotherapy_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,8345.24329155199,0.0,0.007145573034748127,0.007142172516454508,Negligible (<0.01),0.0,True
+mean_concomitant_count,Kruskal-Wallis omnibus H-test,5,1167891,4,4316.128254294829,0.0,0.003695663336696803,0.0036922510024906792,Negligible (<0.01),0.0,True
+secondary_suspect_ratio,Kruskal-Wallis omnibus H-test,5,1167891,4,31932.75828896921,0.0,0.027342265358012492,0.02733893401322493,Small (0.01-0.06),0.0,True

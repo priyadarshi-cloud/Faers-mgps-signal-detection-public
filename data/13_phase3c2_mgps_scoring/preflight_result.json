@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-11T15:27:32Z",
+  "input_csv": "<project-root>/data\\10_phase3b_features\\candidate_pairs_summary.csv",
+  "input_sha256": "1ba9e480ad1d5783e036b395460a5b763d57df565a686b02c081cc9ff0742cec",
+  "row_count": 1167891,
+  "keys_unique": true,
+  "min_a": 2,
+  "max_a": 32292,
+  "min_e": 1.4985416691989246e-06,
+  "max_e": 17398.401830285493,
+  "total_cohort_n": 6005839,
+  "free_disk_gb": 371.58955001831055
+}

@@ -1,0 +1,30 @@
+# =============================================================================
+# FAERS-MGPS Research Pipeline — Dependencies
+# Python Runtime: Python 3.13 (verified in project virtual environment)
+# =============================================================================
+
+# --- Core Computational & Statistical Stack (Direct Dependencies) ---
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+
+# --- Data Acquisition & External Reference Formats ---
+requests==2.34.2
+
+# --- Visualization & Figure Export ---
+matplotlib==3.11.2
+
+# --- Model Interpretability & Attribution ---
+shap==0.53.0
+
+# --- Optional / Platform-Dependent Models ---
+# Note: On Windows systems with strict DLL control policies, RandomForestRegressor
+# from scikit-learn serves as the tested primary surrogate model.
+lightgbm==4.7.0
+
+# --- Development & Testing (Recommended) ---
+# pytest>=8.0.0
+
+# --- Optional Developer Utility (RDA to CSV Extraction Only) ---
+# pyreadr==0.5.7  # Optional: only if re-running scripts/load_omop_reference_set.py (GNU AGPL-3.0)

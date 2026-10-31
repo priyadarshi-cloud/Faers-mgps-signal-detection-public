@@ -1,0 +1,8 @@
+ablation_group,n_features,features,train_r2,test_r2,test_rmse,test_mae,fit_time_s
+M1 Contextual Only,11,"['mean_age', 'median_age', 'age_std', 'age_missing_ratio', 'female_ratio', 'male_ratio', 'hp_reporter_ratio', 'csm_reporter_ratio', 'monotherapy_ratio', 'mean_concomitant_count', 'secondary_suspect_ratio']",0.2362,0.23,1.4763,1.1113,90.8
+"Counts Only (a, b, c, d)",4,"['a', 'b', 'c', 'd']",0.9764,0.9763,0.2592,0.1605,74.5
+Frequentist Disproportionality Only,5,"['prr', 'prr_chi2', 'ror', 'ror_lower_95', 'ror_upper_95']",0.999,0.9989,0.0558,0.0153,84.3
+Counts + Frequentist (No Contextual),9,"['a', 'b', 'c', 'd', 'prr', 'prr_chi2', 'ror', 'ror_lower_95', 'ror_upper_95']",0.9998,0.9997,0.0283,0.0105,108.6
+M2 Without Counts (Contextual + Freq),16,"['mean_age', 'median_age', 'age_std', 'age_missing_ratio', 'female_ratio', 'male_ratio', 'hp_reporter_ratio', 'csm_reporter_ratio', 'monotherapy_ratio', 'mean_concomitant_count', 'secondary_suspect_ratio', 'prr', 'prr_chi2', 'ror', 'ror_lower_95', 'ror_upper_95']",0.9975,0.9974,0.0862,0.0462,127.7
+M2 Without Frequentist (Contextual + Counts),15,"['mean_age', 'median_age', 'age_std', 'age_missing_ratio', 'female_ratio', 'male_ratio', 'hp_reporter_ratio', 'csm_reporter_ratio', 'monotherapy_ratio', 'mean_concomitant_count', 'secondary_suspect_ratio', 'a', 'b', 'c', 'd']",0.8521,0.8509,0.6496,0.4535,96.8
+Full M2 (All 20 Features),20,"['mean_age', 'median_age', 'age_std', 'age_missing_ratio', 'female_ratio', 'male_ratio', 'hp_reporter_ratio', 'csm_reporter_ratio', 'monotherapy_ratio', 'mean_concomitant_count', 'secondary_suspect_ratio', 'a', 'b', 'c', 'd', 'prr', 'prr_chi2', 'ror', 'ror_lower_95', 'ror_upper_95']",0.9992,0.9991,0.0494,0.0273,119.8

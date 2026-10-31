@@ -1,0 +1,188 @@
+{
+  "task": "TASK-T1-03",
+  "title": "Publication Figures Production and Validation",
+  "track": "Track 1 \u2014 Scientific Validation and Publication Preparation",
+  "generated_utc": "2026-10-15T18:01:05Z",
+  "output_directory": "data/21_track1_publication_figures/",
+  "generator_script": "scripts/generate_task_t1_03_figures.py",
+  "validation_script": "data/21_track1_publication_figures/validate_task_t1_03_figures.py",
+  "candidate_universe": {
+    "total_pairs": 1167891,
+    "a_min": 2,
+    "safety_reports": 6005839
+  },
+  "generated_files": [
+    {
+      "path": "data/21_track1_publication_figures/figure1_eb_shrinkage.png",
+      "role": "figure_raster",
+      "description": "Figure 1: EB05 shrinkage vs PRR scatter with tier hexbin panels (300 DPI PNG)",
+      "size_bytes": 1382507,
+      "sha256": "fa802f82acdce80fef196f0e98e9b484005b0f184e73c130eb6fbed3d51dd7b5",
+      "image_metadata": {
+        "width_px": 4305,
+        "height_px": 2767,
+        "min_dpi_assumption": 300
+      }
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure1_eb_shrinkage.pdf",
+      "role": "figure_vector",
+      "description": "Figure 1: EB05 shrinkage vs PRR (vector PDF)",
+      "size_bytes": 555829,
+      "sha256": "0b68bebc79f71e54ef3a7c8867c32d6cc072a5a7ac4064b0329e27fefa277171"
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure1_discordance_by_count_tier.csv",
+      "role": "companion_table",
+      "description": "Tier-level discordance counts, medians, and net signal reduction",
+      "size_bytes": 1824,
+      "sha256": "772c44bd7f4ff43df0bca49e3a33c855d412f19852754f16f3fe25fa8bf10b3f"
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure2_benchmark_curves.png",
+      "role": "figure_raster",
+      "description": "Figure 2: PR and ROC curves for OMOP (N=203) and EU-ADR (N=66) benchmarks (300 DPI PNG)",
+      "size_bytes": 734705,
+      "sha256": "3155bc4f31ad1e0bbe49269228f1df5bd4cd8e887a0e94b7cba4e393f98e941b",
+      "image_metadata": {
+        "width_px": 3378,
+        "height_px": 3124,
+        "min_dpi_assumption": 300
+      }
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure2_benchmark_curves.pdf",
+      "role": "figure_vector",
+      "description": "Figure 2: Benchmark discrimination curves (vector PDF)",
+      "size_bytes": 60999,
+      "sha256": "48aa01653c7c3630fe577bd6fd2b516c494e0f6e5148ef416c6a3ae54c354c84"
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure3_contextual_features.png",
+      "role": "figure_raster",
+      "description": "Figure 3: 11 contextual feature small-multiple panels across 5 EB05 strata (300 DPI PNG)",
+      "size_bytes": 786307,
+      "sha256": "e55d1e821621f1cacafa1c842170d357da18121f617f80f8677a87223cfb993c",
+      "image_metadata": {
+        "width_px": 4571,
+        "height_px": 3286,
+        "min_dpi_assumption": 300
+      }
+    },
+    {
+      "path": "data/21_track1_publication_figures/figure3_contextual_features.pdf",
+      "role": "figure_vector",
+      "description": "Figure 3: Contextual feature distributions (vector PDF)",
+      "size_bytes": 66217,
+      "sha256": "12b2531b0a48d0034d7bd41dae08cade03e98351f3faf6563ec23d4b33bf573e"
+    },
+    {
+      "path": "data/21_track1_publication_figures/publication_figures_methods.md",
+      "role": "methods_document",
+      "description": "Formal methods documentation for all three figures",
+      "size_bytes": 9435,
+      "sha256": "b5bcc921e4470d95f57ed39418266353b574f6d60c5ff7fffed257c9d9e3d6b3"
+    },
+    {
+      "path": "data/21_track1_publication_figures/publication_figures_audit_report.md",
+      "role": "audit_report",
+      "description": "Comprehensive audit trail: arithmetic reconciliation, AUC concordance, limitations",
+      "size_bytes": 10772,
+      "sha256": "50fb1cba44aaad6c83308f618a54fb2024eb649b3282dbd25b916a92cdcb9860"
+    },
+    {
+      "path": "data/21_track1_publication_figures/validate_task_t1_03_figures.py",
+      "role": "validation_script",
+      "description": "Independent automated validation script with arithmetic and hash checks",
+      "size_bytes": 8745,
+      "sha256": "ed7bca42d83e00dae91c70fca9f4780aae91783f7ef901b36f158ba8087f7c72"
+    }
+  ],
+  "upstream_sources": {
+    "scored_pairs": {
+      "path": "data/13_phase3c2_mgps_scoring/phase3c2_scored_candidate_pairs.csv",
+      "size_bytes": 346348936,
+      "sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758"
+    },
+    "omop_matched_pairs": {
+      "path": "data/14_phase3d_benchmark_evaluation/omop_matched_evaluation_pairs.csv",
+      "size_bytes": 39430,
+      "sha256": "b0cd1524cff3b89b9854b59eddc941ec15cd87f4c1159e218d5c6c2ffed7111b"
+    },
+    "eu_adr_matched_pairs": {
+      "path": "data/14_phase3d_benchmark_evaluation/eu_adr_matched_evaluation_pairs.csv",
+      "size_bytes": 12974,
+      "sha256": "e82e226e835d51e10291dbc703ea8c1d804c6cf28ff93a8322abe5b1fd880b51"
+    },
+    "benchmark_results_json": {
+      "path": "data/14_phase3d_benchmark_evaluation/phase3d_benchmark_evaluation_results.json",
+      "size_bytes": 16837,
+      "sha256": "75124b2aa29e7e6b7cbdf36dba57b0b59418aff76b22ef5c24138752a8defea5"
+    },
+    "contextual_strata_summary": {
+      "path": "data/19_track1_contextual_analysis/contextual_strata_summary.csv",
+      "size_bytes": 6660,
+      "sha256": "cdd432d07557c50c8386b7df6d95b395ee715196cf1f96a343e78715492b6a1a"
+    },
+    "contextual_strata_tests": {
+      "path": "data/19_track1_contextual_analysis/contextual_strata_tests.csv",
+      "size_bytes": 1919,
+      "sha256": "239ee31a4b882f4d0d5f7c84004479058ff2d263ea822b127fa84b668fb96a33"
+    },
+    "shrinkage_discordance_tier": {
+      "path": "data/19_track1_contextual_analysis/shrinkage_discordance_by_tier.csv",
+      "size_bytes": 1824,
+      "sha256": "772c44bd7f4ff43df0bca49e3a33c855d412f19852754f16f3fe25fa8bf10b3f"
+    },
+    "signal_contrast_json": {
+      "path": "data/19_track1_contextual_analysis/signal_contrast_statistics.json",
+      "size_bytes": 14083,
+      "sha256": "8bb6d643aa9b0c1af80590be742d20f99fdbfb23a9a6d5685a6523741f19779e"
+    }
+  },
+  "discordance_summary": {
+    "prr_signals_total": 398018,
+    "eb05_signals_total": 295560,
+    "concordant_signals_both": 262859,
+    "prr_only_discordant": 135159,
+    "eb05_only_discordant": 32701,
+    "concordant_non_signals": 737172,
+    "net_signal_reduction": 102458,
+    "balance_check_pass": true
+  },
+  "benchmark_summary": {
+    "omop": {
+      "n_total": 203,
+      "n_pos": 114,
+      "n_neg": 89,
+      "neg_censoring_pct": 61.97,
+      "eb05_pr_auc": 0.8619,
+      "eb05_roc_auc": 0.8136
+    },
+    "euadr": {
+      "n_total": 66,
+      "n_pos": 39,
+      "n_neg": 27,
+      "neg_censoring_pct": 46.0,
+      "eb05_pr_auc": 0.9578,
+      "eb05_roc_auc": 0.9364
+    }
+  },
+  "figure3_top_features_by_effect": [
+    {
+      "feature": "secondary_suspect_ratio",
+      "epsilon_sq": 0.0273,
+      "magnitude": "Small"
+    },
+    {
+      "feature": "csm_reporter_ratio",
+      "epsilon_sq": 0.0182,
+      "magnitude": "Small"
+    },
+    {
+      "feature": "age_std",
+      "epsilon_sq": 0.0107,
+      "magnitude": "Small"
+    }
+  ]
+}

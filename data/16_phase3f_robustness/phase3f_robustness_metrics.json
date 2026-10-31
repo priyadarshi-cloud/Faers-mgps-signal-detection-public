@@ -1,0 +1,417 @@
+{
+  "metadata": {
+    "primary_scored_sha256": "79d07631e65fef8a84cd14e3368c3ca379ec59f66088d3a5824d9dbf6ada5758",
+    "total_pairs": 1167891
+  },
+  "reconciliation": {
+    "status": "complete",
+    "m1_100_trees_depth_10": {
+      "test_r2": 0.23,
+      "test_rmse": 1.4763,
+      "fit_time_s": 93.2,
+      "matches_phase3e_final": true
+    },
+    "m1_100_trees_depth_12": {
+      "test_r2": 0.2551,
+      "test_rmse": 1.452,
+      "fit_time_s": 101.5
+    },
+    "historical_task_1217_300_trees_depth_12": {
+      "test_r2": 0.2558,
+      "test_rmse": 1.4513,
+      "train_r2": 0.274,
+      "train_rmse": 1.4336,
+      "fit_time_s": 288.8,
+      "notes": "Verified from task-1217.log before 10k SHAP timeout/kill"
+    },
+    "root_cause_explanation": "The discrepancy between 0.2558 and 0.2300 is entirely governed by model capacity: task-1217 used 300 trees with max_depth=12 (R2=0.2558, fit time 288.8s); task-1246 reduced capacity to 100 trees and max_depth=10 to improve execution speed and memory headroom, yielding R2=0.2300 (fit time 93.2s). Increasing depth to 12 with 100 trees gives R2=0.2551, confirming that tree depth is the primary driver. Both results are genuine and reproducible under their respective parameters."
+  },
+  "seed_stability": {
+    "status": "complete",
+    "runs": [
+      {
+        "seed": 42,
+        "m1_test_r2": 0.23,
+        "m1_test_rmse": 1.4763,
+        "m2_test_r2": 0.9991,
+        "m2_test_rmse": 0.0494
+      },
+      {
+        "seed": 101,
+        "m1_test_r2": 0.2282,
+        "m1_test_rmse": 1.4775,
+        "m2_test_r2": 0.9992,
+        "m2_test_rmse": 0.0488
+      },
+      {
+        "seed": 777,
+        "m1_test_r2": 0.2288,
+        "m1_test_rmse": 1.4841,
+        "m2_test_r2": 0.9992,
+        "m2_test_rmse": 0.0488
+      }
+    ],
+    "m1_mean_r2": 0.229,
+    "m1_std_r2": 0.00075,
+    "m2_mean_r2": 0.9992,
+    "m2_std_r2": 5e-05
+  },
+  "hyperparameter_grid": {
+    "status": "complete",
+    "m1_depth_sensitivity": [
+      {
+        "depth": 8,
+        "n_trees": 100,
+        "test_r2": 0.1971,
+        "test_rmse": 1.5075
+      },
+      {
+        "depth": 10,
+        "n_trees": 100,
+        "test_r2": 0.23,
+        "test_rmse": 1.4763
+      },
+      {
+        "depth": 12,
+        "n_trees": 100,
+        "test_r2": 0.2551,
+        "test_rmse": 1.452
+      }
+    ],
+    "m1_tree_sensitivity": [
+      {
+        "depth": 10,
+        "n_trees": 50,
+        "test_r2": 0.2292,
+        "test_rmse": 1.477
+      },
+      {
+        "depth": 10,
+        "n_trees": 100,
+        "test_r2": 0.23,
+        "test_rmse": 1.4763
+      }
+    ],
+    "m2_depth_sensitivity": [
+      {
+        "depth": 8,
+        "n_trees": 100,
+        "test_r2": 0.9967,
+        "test_rmse": 0.0966
+      },
+      {
+        "depth": 10,
+        "n_trees": 100,
+        "test_r2": 0.9991,
+        "test_rmse": 0.0494
+      },
+      {
+        "depth": 12,
+        "n_trees": 100,
+        "test_r2": 0.9997,
+        "test_rmse": 0.0297
+      }
+    ],
+    "m2_tree_sensitivity": [
+      {
+        "depth": 10,
+        "n_trees": 50,
+        "test_r2": 0.9991,
+        "test_rmse": 0.051
+      },
+      {
+        "depth": 10,
+        "n_trees": 100,
+        "test_r2": 0.9991,
+        "test_rmse": 0.0494
+      }
+    ]
+  },
+  "ablation_study": {
+    "status": "complete",
+    "records": [
+      {
+        "ablation_group": "M1 Contextual Only",
+        "n_features": 11,
+        "features": [
+          "mean_age",
+          "median_age",
+          "age_std",
+          "age_missing_ratio",
+          "female_ratio",
+          "male_ratio",
+          "hp_reporter_ratio",
+          "csm_reporter_ratio",
+          "monotherapy_ratio",
+          "mean_concomitant_count",
+          "secondary_suspect_ratio"
+        ],
+        "train_r2": 0.2362,
+        "test_r2": 0.23,
+        "test_rmse": 1.4763,
+        "test_mae": 1.1113,
+        "fit_time_s": 90.8
+      },
+      {
+        "ablation_group": "Counts Only (a, b, c, d)",
+        "n_features": 4,
+        "features": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "train_r2": 0.9764,
+        "test_r2": 0.9763,
+        "test_rmse": 0.2592,
+        "test_mae": 0.1605,
+        "fit_time_s": 74.5
+      },
+      {
+        "ablation_group": "Frequentist Disproportionality Only",
+        "n_features": 5,
+        "features": [
+          "prr",
+          "prr_chi2",
+          "ror",
+          "ror_lower_95",
+          "ror_upper_95"
+        ],
+        "train_r2": 0.999,
+        "test_r2": 0.9989,
+        "test_rmse": 0.0558,
+        "test_mae": 0.0153,
+        "fit_time_s": 84.3
+      },
+      {
+        "ablation_group": "Counts + Frequentist (No Contextual)",
+        "n_features": 9,
+        "features": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "prr",
+          "prr_chi2",
+          "ror",
+          "ror_lower_95",
+          "ror_upper_95"
+        ],
+        "train_r2": 0.9998,
+        "test_r2": 0.9997,
+        "test_rmse": 0.0283,
+        "test_mae": 0.0105,
+        "fit_time_s": 108.6
+      },
+      {
+        "ablation_group": "M2 Without Counts (Contextual + Freq)",
+        "n_features": 16,
+        "features": [
+          "mean_age",
+          "median_age",
+          "age_std",
+          "age_missing_ratio",
+          "female_ratio",
+          "male_ratio",
+          "hp_reporter_ratio",
+          "csm_reporter_ratio",
+          "monotherapy_ratio",
+          "mean_concomitant_count",
+          "secondary_suspect_ratio",
+          "prr",
+          "prr_chi2",
+          "ror",
+          "ror_lower_95",
+          "ror_upper_95"
+        ],
+        "train_r2": 0.9975,
+        "test_r2": 0.9974,
+        "test_rmse": 0.0862,
+        "test_mae": 0.0462,
+        "fit_time_s": 127.7
+      },
+      {
+        "ablation_group": "M2 Without Frequentist (Contextual + Counts)",
+        "n_features": 15,
+        "features": [
+          "mean_age",
+          "median_age",
+          "age_std",
+          "age_missing_ratio",
+          "female_ratio",
+          "male_ratio",
+          "hp_reporter_ratio",
+          "csm_reporter_ratio",
+          "monotherapy_ratio",
+          "mean_concomitant_count",
+          "secondary_suspect_ratio",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "train_r2": 0.8521,
+        "test_r2": 0.8509,
+        "test_rmse": 0.6496,
+        "test_mae": 0.4535,
+        "fit_time_s": 96.8
+      },
+      {
+        "ablation_group": "Full M2 (All 20 Features)",
+        "n_features": 20,
+        "features": [
+          "mean_age",
+          "median_age",
+          "age_std",
+          "age_missing_ratio",
+          "female_ratio",
+          "male_ratio",
+          "hp_reporter_ratio",
+          "csm_reporter_ratio",
+          "monotherapy_ratio",
+          "mean_concomitant_count",
+          "secondary_suspect_ratio",
+          "a",
+          "b",
+          "c",
+          "d",
+          "prr",
+          "prr_chi2",
+          "ror",
+          "ror_lower_95",
+          "ror_upper_95"
+        ],
+        "train_r2": 0.9992,
+        "test_r2": 0.9991,
+        "test_rmse": 0.0494,
+        "test_mae": 0.0273,
+        "fit_time_s": 119.8
+      }
+    ]
+  },
+  "strata_calibration": {
+    "status": "complete",
+    "records": [
+      {
+        "stratum": "EB05 < 1.0 (Non-Signal Noise)",
+        "test_n": 135699,
+        "pct_of_test": 58.1,
+        "mean_true_log_eb05": -1.2002,
+        "m1_mean_pred": -0.3305,
+        "m1_bias": 0.8697,
+        "m1_rmse": 1.28,
+        "m1_mae": 0.991,
+        "m1_corr": 0.2358,
+        "m2_mean_pred": -1.1944,
+        "m2_bias": 0.0058,
+        "m2_rmse": 0.0397,
+        "m2_mae": 0.023,
+        "m2_corr": 0.9992
+      },
+      {
+        "stratum": "1.0 <= EB05 < 2.0 (Sub-threshold)",
+        "test_n": 39067,
+        "pct_of_test": 16.73,
+        "mean_true_log_eb05": 0.3235,
+        "m1_mean_pred": -0.0234,
+        "m1_bias": -0.3469,
+        "m1_rmse": 0.6505,
+        "m1_mae": 0.5295,
+        "m1_corr": 0.1218,
+        "m2_mean_pred": 0.3276,
+        "m2_bias": 0.0041,
+        "m2_rmse": 0.0217,
+        "m2_mae": 0.0164,
+        "m2_corr": 0.9942
+      },
+      {
+        "stratum": "2.0 <= EB05 < 5.0 (Primary Signal)",
+        "test_n": 28796,
+        "pct_of_test": 12.33,
+        "mean_true_log_eb05": 1.0932,
+        "m1_mean_pred": 0.1805,
+        "m1_bias": -0.9126,
+        "m1_rmse": 1.0927,
+        "m1_mae": 0.9668,
+        "m1_corr": 0.0953,
+        "m2_mean_pred": 1.0864,
+        "m2_bias": -0.0068,
+        "m2_rmse": 0.0339,
+        "m2_mae": 0.0256,
+        "m2_corr": 0.9918
+      },
+      {
+        "stratum": "5.0 <= EB05 < 10.0 (Strong Signal)",
+        "test_n": 10076,
+        "pct_of_test": 4.31,
+        "mean_true_log_eb05": 1.9178,
+        "m1_mean_pred": 0.3351,
+        "m1_bias": -1.5826,
+        "m1_rmse": 1.7023,
+        "m1_mae": 1.5966,
+        "m1_corr": 0.0626,
+        "m2_mean_pred": 1.9188,
+        "m2_bias": 0.001,
+        "m2_rmse": 0.054,
+        "m2_mae": 0.039,
+        "m2_corr": 0.9634
+      },
+      {
+        "stratum": "EB05 >= 10.0 (Extreme Signal)",
+        "test_n": 19941,
+        "pct_of_test": 8.54,
+        "mean_true_log_eb05": 3.6028,
+        "m1_mean_pred": 0.5727,
+        "m1_bias": -3.0301,
+        "m1_rmse": 3.2188,
+        "m1_mae": 3.0333,
+        "m1_corr": 0.2388,
+        "m2_mean_pred": 3.566,
+        "m2_bias": -0.0369,
+        "m2_rmse": 0.1173,
+        "m2_mae": 0.0743,
+        "m2_corr": 0.9939
+      }
+    ]
+  },
+  "shap_stability": {
+    "status": "complete",
+    "m1_rank_correlation_spearman": 0.9818,
+    "m2_rank_correlation_spearman": 0.9865,
+    "base_value_m2": -0.10845,
+    "max_additivity_error": 3.552713678800501e-14,
+    "additivity_verified": true
+  },
+  "mgps_fit_sensitivity_summary": {
+    "status": "complete",
+    "primary_fit_alpha1": 0.001,
+    "primary_log_likelihood": -3372348.3387,
+    "symmetric_multistart_findings": [
+      {
+        "bound": "alpha >= 0.0001",
+        "log_likelihood": -3372322.0126,
+        "delta_ll": 26.33,
+        "spearman_rho_ebgm": 0.999999997
+      },
+      {
+        "bound": "alpha >= 0.0010 (Primary)",
+        "log_likelihood": -3372348.3387,
+        "delta_ll": 0.0,
+        "spearman_rho_ebgm": 1.0
+      },
+      {
+        "bound": "alpha >= 0.0100",
+        "log_likelihood": -3372612.0558,
+        "delta_ll": -263.72,
+        "spearman_rho_ebgm": 0.999999973
+      },
+      {
+        "bound": "alpha >= 0.0500",
+        "log_likelihood": -3373787.7802,
+        "delta_ll": -1439.44,
+        "spearman_rho_ebgm": 0.999999341
+      }
+    ],
+    "analytical_verdict": "The alpha1=0.001 boundary hit represents an optimization boundary effect resulting from a zero-spike prior component in the 2-component negative binomial mixture. It does NOT impair scientific validity: across all candidate bounds from 0.0001 to 0.05, the Spearman rank correlation of EBGM and EB05 scores is rho > 0.999999. Signal prioritization is completely invariant to this boundary."
+  }
+}

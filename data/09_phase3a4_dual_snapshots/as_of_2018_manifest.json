@@ -1,0 +1,25 @@
+{
+  "policy_name": "AS_OF_2018",
+  "description": "Historical snapshot using strictly information available by 2018-12-31 without retraction look-ahead",
+  "cutoff_date": "2018-12-31",
+  "generated_at": "2026-10-11T03:06:25.774104",
+  "input_raw_demo_rows": 15428448,
+  "duplicate_primaryid_rows_excluded": 463,
+  "date_ineligible_quarantined": 0,
+  "excluded_init_after_cutoff": 8504708,
+  "excluded_fda_after_cutoff": 333954,
+  "excluded_retracted_cases": 0,
+  "eligible_unique_caseids": 6012891,
+  "canonical_selected_cases": 6012891,
+  "duplicate_caseids_in_snapshot": 0,
+  "selection_reasons": {
+    "only_version": 5517320,
+    "latest_fda_dt": 495257,
+    "tie_broken_by_caseversion": 314
+  },
+  "deletion_files_applied": [],
+  "n_deletion_files_applied": 0,
+  "snapshot_file": "as_of_2018_snapshot.csv",
+  "file_size_bytes": 573046288,
+  "sha256_checksum": "954aa954df4cae71803f6c5f3e1b40f32aa16291d8165af096046af3e51f7ab0"
+}

@@ -1,0 +1,37 @@
+{
+  "task": "TASK-T1-17",
+  "title": "Final Manuscript Release and Reproducibility Readiness Review",
+  "created_at": "2026-10-18T07:59:00Z",
+  "artifacts": [
+    {
+      "filename": "manuscript_final_release_candidate.md",
+      "path": "<project-root>/data\\39_task_t1_17_release_readiness\\manuscript_final_release_candidate.md",
+      "size_bytes": 39755,
+      "sha256": "858e67e1bba96758b637c98eff8cfae53ac3b9046f78bf8acb4271d4a83ff8a6"
+    },
+    {
+      "filename": "release_readiness_report.md",
+      "path": "<project-root>/data\\39_task_t1_17_release_readiness\\release_readiness_report.md",
+      "size_bytes": 11036,
+      "sha256": "9f1833683499d4889c3856856771d11a771fcebf1a2865e64cc1717da398b2f8"
+    },
+    {
+      "filename": "manuscript_claim_consistency.csv",
+      "path": "<project-root>/data\\39_task_t1_17_release_readiness\\manuscript_claim_consistency.csv",
+      "size_bytes": 9678,
+      "sha256": "0513c829587a99dbd5a8138f7b6048fe3e17ba5031b831aacb153ce1e5401470"
+    },
+    {
+      "filename": "remaining_author_actions.md",
+      "path": "<project-root>/data\\39_task_t1_17_release_readiness\\remaining_author_actions.md",
+      "size_bytes": 8345,
+      "sha256": "38011bde15dd4841e37dba000c11b4c68349913e64d66da7bb1c7a2f920f37ce"
+    },
+    {
+      "filename": "validation_script.py",
+      "path": "<project-root>/data\\39_task_t1_17_release_readiness\\validation_script.py",
+      "size_bytes": 5165,
+      "sha256": "611b683135dc3a673226661fd70b59f0171f894bfa8eb90572fbbc5ebfc6f351"
+    }
+  ]
+}
