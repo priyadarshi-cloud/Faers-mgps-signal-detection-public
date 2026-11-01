@@ -2,7 +2,7 @@
 
 **A Systematic Evaluation of the Multi-Item Gamma-Poisson Shrinker Against Independent Benchmark Standards with Contextual Characterisation of Drug–Adverse Drug Reaction Pairs**
 
-> **Repository status:** Public release — manuscript submitted for peer review.
+> **Repository status:** Public research software release.
 > This repository contains source code, validated reference standards, and pre-computed publication tables for reproducing the key results of the study.
 > Raw FAERS archives (~14.7 GB) must be downloaded separately. See [Section 13](#13-data-access-instructions).
 
@@ -429,7 +429,7 @@ Priyadarshi, A. K. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spont
 GitHub repository: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public
 ```
 
-*Upon publication of the peer-reviewed manuscript, this section will be updated with the formal journal citation and article DOI.*
+*A formal journal citation and article DOI will be added here if the associated research is published.*
 
 ### Key Methodological References
 
