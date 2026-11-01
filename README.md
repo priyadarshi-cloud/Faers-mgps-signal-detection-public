@@ -25,9 +25,10 @@
 9. [Expected Outputs and Locations](#9-expected-outputs-and-locations)
 10. [Repository Structure](#10-repository-structure)
 11. [Known Limitations](#11-known-limitations)
-12. [Citation](#12-citation)
+12. [Citation and Reference](#12-citation-and-reference)
 13. [Data Access Instructions](#13-data-access-instructions)
 14. [License](#14-license)
+15. [Ethics and Regulatory Declarations](#15-ethics-and-regulatory-declarations)
 
 ---
 
@@ -44,11 +45,15 @@ The research addresses four empirical questions:
 
 > **Scope boundary:** This is an **unsupervised statistical disproportionality signal detection** study. No supervised ADR prediction model is claimed or developed. Surrogate Random Forest models are analytical tools for score emulation only; they do not predict true ADR occurrence or biological causality.
 
+> **Historical Label Feasibility Investigation:** Two pre-modelling audit reports included in the repository (`modelling_readiness_and_historical_label_audit.md` and `pre_modelling_readiness_report.md`) document an earlier investigation into the feasibility of constructing dated positive labels from historical DailyMed Structured Product Labeling (SPL) XML archives. That audit established a formal "NO-GO" decision for supervised machine-learning model training due to the absence of reliable regulatory approval timestamps in retrospective SPL files. In accordance with research integrity standards, these reports are retained for methodological transparency, demonstrating why this study focuses strictly on unsupervised statistical disproportionality signal detection (MGPS/EB05) rather than supervised ADR prediction.
+
 ---
 
 ## 2. Data Sources and Historical Cohort Definition
 
 ### Primary Data: FDA FAERS ASCII Archives
+
+> **FDA Disclaimer:** This analysis is an independent research effort. It was not conducted by or on behalf of the U.S. Food and Drug Administration and does not represent FDA views, findings, or endorsement.
 
 - **Source:** US FDA Adverse Event Reporting System (FAERS) — https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
 - **Cohort span:** 20 quarterly archive packages, **2014 Q1 to 2018 Q4**
@@ -102,25 +107,33 @@ where N_total = 6,005,839.
 |:-------|:------------|
 | PRR    | Evans: a >= 3, PRR >= 2.0, chi-squared >= 4.0 |
 | ROR    | Lower 95% Wald CI > 1 |
-| EBGM   | exp(E[ln lambda | n, E]) |
+| EBGM   | `exp(E[ln λ \| n, E])` |
 | EB05   | 5th percentile of posterior; EB05 >= 2.0 |
 
 ### 3.3 MGPS Model (Truncated Conditional Likelihood)
 
-A two-component Gamma-Poisson mixture prior was fitted to all candidate pairs using a **conditional likelihood truncated at a >= 2**, normalizing for left-truncation bias. The truncation normalization denominator uses the regularized incomplete beta function.
+A two-component Gamma-Poisson mixture prior was fitted to all candidate pairs using a **conditional likelihood truncated at $a \ge 2$**, normalizing for left-truncation bias. The truncation normalization denominator uses the regularized incomplete beta function.
+
+The prior distribution on the true relative reporting ratio $\lambda$ follows the classic DuMouchel (1999) two-component Poisson-Gamma mixture parameterized by shape ($\alpha$) and rate ($\beta$):
+$$\pi(\lambda \mid \theta) = w \cdot \text{Gamma}(\alpha_1, \beta_1) + (1 - w) \cdot \text{Gamma}(\alpha_2, \beta_2)$$
+where $\mathbb{E}[\lambda] = \alpha/\beta$ and $\text{Var}(\lambda) = \alpha/\beta^2$.
 
 **Key implementation:** `src/signal_detection/ebgm_engine.py`
 
-Optimization: Multi-start L-BFGS-B across seven initial configurations. Convergence to log-likelihood = -3,372,348.34, replicated across restarts 1 and 5 (delta-NLL < 0.0001).
+**Optimization:** Multi-start L-BFGS-B across seven diverse initial configurations passed by the production pipeline (`scripts/run_phase3c2_mgps_pipeline.py`), spanning pilot conditional regimes, openEBGM defaults, and balanced baselines (while `src/signal_detection/ebgm_engine.py` provides 5 default configurations for standalone library usage). Convergence to log-likelihood = -3,372,348.34 was replicated across restarts 1 and 5 ($\Delta\text{NLL} < 0.0001$).
 
-**Fitted hyperparameters** (frozen; see `data/20_track1_publication_tables/table2_mgps_fit_sensitivity.csv`):
+**Fitted hyperparameters** (frozen; see `data/20_track1_publication_tables/table2_mgps_fit_sensitivity.csv` and `data/13_phase3c2_mgps_scoring/fit_checkpoint.json`):
 
-| Parameter | Value |
-|:----------|:-----:|
-| alpha_1   | 0.0010 |
-| log-likelihood | -3,372,348.34 |
+| Parameter | Value | Standard Error | Meaning / Optimization Note |
+|:---|:---:|:---:|:---|
+| $\alpha_1$ (Component 1 Shape) | 0.001000 | $6.77 \times 10^{-5}$ | Boundary hit at lower optimization limit $[0.001, 10.0]$ |
+| $\beta_1$ (Component 1 Rate) | 0.006809 | $4.35 \times 10^{-5}$ | Component 1 mean $\mu_1 = \alpha_1/\beta_1 = 0.1469$ (heavy shrinkage toward zero) |
+| $\alpha_2$ (Component 2 Shape) | 0.285887 | $2.64 \times 10^{-3}$ | Well-conditioned interior solution |
+| $\beta_2$ (Component 2 Rate) | 0.400371 | $2.12 \times 10^{-3}$ | Component 2 mean $\mu_2 = \alpha_2/\beta_2 = 0.7141$ |
+| $w$ (Mixture Weight Component 1) | 0.849904 | $8.72 \times 10^{-3}$ | 84.99% prior mixture weight assigned to extreme-shrinkage component 1 |
+| Log-Likelihood | -3,372,348.34 | N/A | Maximized conditional log-likelihood (converged in 103 iterations) |
 
-> **Warning — alpha_1 boundary contact:** alpha_1 converged to its lower boundary (0.001). Sensitivity analysis across alpha_1 >= {0.0001, 0.001, 0.010, 0.050} shows Spearman rank correlations rho > 0.999999 with the primary fit, indicating negligible practical impact on signal rankings.
+> **Warning — $\alpha_1$ boundary contact:** $\alpha_1$ converged to its lower boundary ($0.001$). Sensitivity analysis across $\alpha_1 \ge \{0.0001, 0.001, 0.010, 0.050\}$ shows Spearman rank correlations $\rho > 0.999999$ with the primary fit, indicating negligible practical impact on signal rankings.
 
 **2D logarithmic binning:** Pairs were compressed into 61,709 unique bins for scalable optimization. Pilot calibration (Phase 3c1; 100,000 reports, approximately 42,000 pairs) measured approximately 0.00013% relative log-likelihood error vs. exact unbinned summation. This bound applies to the pilot cohort and is not asserted as an exact full-dataset error guarantee.
 
@@ -163,11 +176,11 @@ Source: `data/33_task_t1_11_final_benchmark_audit/independently_recomputed_stati
 Paired percentile bootstrap resampling at the drug-event pair level (B = 2,000, seed 42, shared row indices across methods). All paired difference CIs span zero.
 
 ### Drug-Cluster Bootstrap Sensitivity
-Resampling at the drug active-substance cluster level (K = 126 OMOP clusters, K = 46 EU-ADR clusters; B = 2,000):
-- **OMOP:** All difference intervals continue to span zero
-- **EU-ADR (canonical seed 42):** delta-AP (EB05 minus PRR) = +0.021325, 95% CI [+0.000140, +0.055024]; ROC-AUC CI spans zero
-- **EU-ADR (10 alternative seeds):** All 10 alternative-seed delta-AP CIs have lower bounds below zero — inferential conclusion is seed-sensitive
-- **Outcome-cluster resampling:** Infeasible — only 4 OMOP and 10 EU-ADR outcome clusters; omitting the single Acute Liver Failure OMOP cluster drops positive control prevalence from 56.2% to 37.3%
+Resampling at the drug active-substance cluster level ($K = 126$ OMOP clusters, $K = 46$ EU-ADR clusters; $B = 2,000$):
+- **OMOP:** All difference intervals continue to span zero.
+- **EU-ADR (10 alternative seeds — Primary Robustness Finding):** Across 10 alternative random seeds (Seeds 0, 1, 7, 99, 123, 456, 999, 2024, 31337, 8675309), every single paired $\Delta\text{AP}$ confidence interval spans zero (lower bounds range from $-0.001906$ to $-0.000351$; upper bounds range from $+0.053792$ to $+0.058160$). Under drug-clustered resampling, the apparent discrimination advantage of EB05 over PRR is not statistically significant at the 5% level.
+- **EU-ADR (canonical seed 42 — Secondary Sensitivity):** $\Delta\text{AP}$ (EB05 minus PRR) = $+0.021325$, 95% CI $[+0.000140, +0.055024]$; ROC-AUC CI spans zero. This nominal exclusion of zero is sensitive to random seed selection and is not replicated across the alternative seeds.
+- **Outcome-cluster resampling:** Infeasible — only 4 OMOP and 10 EU-ADR outcome clusters; omitting the single Acute Liver Failure OMOP cluster drops positive control prevalence from 56.2% to 37.3%.
 
 Source: `data/49_task_t1_27_manuscript_integration/supplementary_table_s1.csv`
 Script: `scripts/run_phase3f_robustness.py`
@@ -194,7 +207,7 @@ Source: `data/20_track1_publication_tables/table4_contextual_strata.csv`
 
 ### Requirements
 
-- **Python 3.13** (confirmed via .venv containing cpython-313 compiled extensions)
+- **Python 3.13** (standard runtime; see `requirements.txt` for pinned dependencies)
 
 ### Verified Packages
 
@@ -215,21 +228,23 @@ Source: `data/20_track1_publication_tables/table4_contextual_strata.csv`
 
 ```bash
 # Clone the repository
-git clone https://github.com/priyadarshi-cloud/faers-mgps-signal-detection.git
-cd faers-mgps-signal-detection
+git clone https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public.git
+cd Faers-mgps-signal-detection-public
 
 # Create and activate virtual environment
 python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/macOS:
+# On Windows (PowerShell):
+.\.venv\Scripts\Activate.ps1
+# On Windows (Command Prompt):
+.venv\Scripts\activate.bat
+# On Linux/macOS:
 source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-> **Note:** Clean-environment reproducibility on platforms other than Windows with Python 3.13 has not been independently tested. The pipeline was developed and validated on Windows 10 with Python 3.13.
+> **Note:** The pipeline was developed and validated on Windows 10 with Python 3.13. Automated CI validates core algorithmic and analytical modules on Ubuntu Linux with Python 3.13.
 
 ---
 
@@ -401,27 +416,27 @@ The following limitations are disclosed in the manuscript (Section 5.2):
 8. **Observational reporting biases:** Conditional likelihood truncation does not eliminate notoriety bias, channeling, the Weber effect, or indication confounding.
 9. **Ingredient-level normalization:** Dosage, formulation, route, and indication are not modeled.
 10. **No causal proof:** Disproportionality signals do not establish biological causality or clinical incidence rates.
-11. **Environment:** Pipeline developed and validated on Windows 10 with Python 3.13. Cross-platform reproducibility on Linux/macOS has not been independently tested.
+11. **Environment:** Pipeline developed and validated on Windows 10 with Python 3.13. Automated CI validates core algorithmic and analytical modules on Ubuntu Linux with Python 3.13.
 
 ---
 
-## 12. Citation
+## 12. Citation and Reference
 
-> **[Author Action Required]** Replace this placeholder with the final bibliographic record upon journal acceptance.
+If you use this software or its methodology, please cite this repository:
 
+```text
+Priyadarshi, A. K. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports.
+GitHub repository: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public
 ```
-[Author list TBD]. Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance
-Reports: A Systematic Evaluation of the Multi-Item Gamma-Poisson Shrinker Against
-Independent Benchmark Standards with Contextual Characterisation of Drug-Adverse Drug
-Reaction Pairs. [Journal TBD]. [Year TBD]. DOI: [TBD]
-```
+
+*Upon publication of the peer-reviewed manuscript, this section will be updated with the formal journal citation and article DOI.*
 
 ### Key Methodological References
 
 1. DuMouchel W. Bayesian data mining in large frequency tables, with an application to the FDA spontaneous reporting system. *The American Statistician*. 1999;53(3):177-190.
 2. Evans SJW, Waller PC, Davis S. Use of proportional reporting ratios (PRRs) for signal generation from spontaneous adverse drug reaction reports. *Pharmacoepidemiology and Drug Safety*. 2001;10(6):483-486.
-3. Ryan PB et al. Defining a reference set to support methodological research in drug safety. *Drug Safety*. 2013;36(Suppl 1):S33-S47.
-4. Coloma PM et al. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(Suppl 1):S13-S23.
+3. Ryan PB, Schuemie MJ, Welebob E, Duke J, Valentine S, Hartzema AG. Defining a reference set to support methodological research in drug safety. *Drug Safety*. 2013;36(Suppl 1):S33-S47. DOI: [10.1007/s40264-013-0097-8](https://doi.org/10.1007/s40264-013-0097-8).
+4. Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, et al. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
 5. Benjamini Y, Hochberg Y. Controlling the false discovery rate. *JRSS-B*. 1995;57(1):289-300.
 
 ---
@@ -441,15 +456,13 @@ Archives are downloaded from `https://fis.fda.gov/content/Exports/faers_ascii_<Y
 ### OMOP and EU-ADR Reference Standards
 
 - OMOP: https://github.com/OHDSI/MethodEvaluation
-- EU-ADR: Coloma et al. 2013, Drug Safety 36(Suppl 1):S13-S23
+- EU-ADR: Coloma et al. 2013, Drug Safety 36(1):13-23
 
 Files in `data/05_reference_standards/` are included in this repository (no patient-level information).
 
 ### Primary Derived Datasets
 
-> **[Author Action Required]** Deposit primary evaluation tables in Zenodo, OSF, or Dryad and provide the persistent DOI here.
-
-The following pre-computed primary datasets are included in this repository for result verification:
+Pre-computed primary evaluation tables and sensitivity outputs are bundled directly in this repository for local verification:
 
 | Dataset | Location | Description |
 |:--------|:---------|:------------|
@@ -486,23 +499,16 @@ The Apache License 2.0 applies to the project software code in `src/` and `scrip
 
 - **OMOP Reference Standard:** Distributed under the Apache License 2.0 by OHDSI (Ryan et al. 2013).
 - **EU-ADR Reference Standard:** Standardized into OMOP concepts and distributed under the Apache License 2.0 by OHDSI MethodEvaluation (Coloma et al. 2013).
-- **FAERS Spontaneous Reports:** US Government public domain data under 17 U.S.C. § 105.
+- **FAERS Public Data:** Spontaneous adverse event report compilations publicly distributed by the U.S. FDA without copyright restriction. See [FDA Disclaimer](#2-data-sources-and-historical-cohort-definition) and [`DATA_NOTICES.md`](DATA_NOTICES.md) for details.
 
 For comprehensive details on dataset provenance, cryptographic hashes, transformation methodologies, and bibliographic citations, see [`DATA_NOTICES.md`](DATA_NOTICES.md).
 
 ---
 
-## Author Responsibilities (Non-Delegable)
+## 15. Ethics and Regulatory Declarations
 
-- [ ] Confirm institutional IRB exemption for publicly available, de-identified spontaneous reporting data
-- [x] Formally select and add a `LICENSE` file to this repository (Apache License 2.0 committed)
-- [x] Document third-party reference data notices and provenance ([`DATA_NOTICES.md`](DATA_NOTICES.md))
-- [ ] Deposit primary datasets in Zenodo/OSF/Dryad; obtain DOI; update Section 13
-- [ ] Update Section 12 citation with final bibliographic record upon journal acceptance
-- [ ] Create a tagged GitHub release (e.g., `v1.0.0`) and link to Zenodo
-- [ ] Declare all funding sources and complete ICMJE conflict-of-interest forms
-- [ ] Confirm full author list, institutional affiliations, and CRediT contributions
-- [ ] Verify all bibliographic references against original publications
+- **Data Governance:** This research uses de-identified, publicly available adverse event report data published by the U.S. FDA and external reference standards published by OHDSI. No identifiable private health information (PHI) was accessed, stored, or processed.
+- **Regulatory Disclaimer:** This analysis is an independent academic research effort. It was not conducted by or on behalf of the U.S. Food and Drug Administration and does not represent FDA views, findings, or endorsement.
 
 ---
 

@@ -1,6 +1,5 @@
 # =============================================================================
 # FAERS MGPS Research Repository — .gitignore
-# Prepared: TASK-T1-36, October 2026
 # =============================================================================
 
 # -----------------------------------------------------------------------------
@@ -113,11 +112,8 @@ search_files.py
 # data/20_track1_publication_tables/  — Publication tables CSV (INCLUDE - small)
 # data/21_track1_publication_figures/ — Publication figures PNG/PDF (INCLUDE)
 # data/33_task_t1_11_final_benchmark_audit/ — Recomputed stats (INCLUDE)
-# data/57_task_t1_35_consistency_corrections/ — Approved manuscript (INCLUDE)
-# data/39_task_t1_17_release_readiness/ — Release readiness package (INCLUDE)
-# data/58_task_t1_36_github_release_prep/ — This task outputs (INCLUDE)
 # requirements.txt                 — Dependency manifest (INCLUDE)
-# pyproject.toml                   — Linter config (INCLUDE)
+# pyproject.toml                   — Project and linter config (INCLUDE)
 # README.md                        — Repository documentation (INCLUDE)
 # research_architecture_blueprint.md — Architecture doc (INCLUDE)
 # *.md files in data/              — Audit and report documents (INCLUDE)

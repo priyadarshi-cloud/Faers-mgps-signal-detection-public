@@ -1,3 +1,20 @@
+[project]
+name = "faers-mgps-signal-detection"
+version = "1.0.0"
+description = "Multi-Item Gamma-Poisson Shrinker (MGPS) Empirical Bayes Signal Detection Pipeline for FDA FAERS"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scipy==1.18.1",
+    "scikit-learn==1.9.1",
+    "requests==2.34.2",
+    "matplotlib==3.11.2",
+    "shap==0.53.0",
+    "lightgbm==4.7.0",
+]
+
 [tool.pyrefly]
 preset = "basic"
 search-path = [".", "scripts"]

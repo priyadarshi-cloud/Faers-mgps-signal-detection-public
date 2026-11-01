@@ -16,7 +16,7 @@ This document describes the provenance, bibliographic citations, and licensing t
 - **Upstream Repository:** Observational Health Data Sciences and Informatics (OHDSI) — [`OHDSI/MethodEvaluation`](https://github.com/OHDSI/MethodEvaluation)
 - **Upstream Revision:** Release `v2.4.2` (Published 2026-09-18; maintainer Dr. Martijn Schuemie)
 - **Bibliographic Citation:**
-  > Ryan PB, Schuemie MJ, Welebob E, Duke J, Valentine S, Hartzema AG. Defining a central concept of health outcome of interest for pharmacovigilance. *Drug Safety*, 2013; 36(Suppl 1):S33–S47. DOI: [10.1007/s40264-013-0099-7](https://doi.org/10.1007/s40264-013-0099-7).
+  > Ryan PB, Schuemie MJ, Welebob E, Duke J, Valentine S, Hartzema AG. Defining a reference set to support methodological research in drug safety. *Drug Safety*, 2013; 36(Suppl 1):S33–S47. DOI: [10.1007/s40264-013-0097-8](https://doi.org/10.1007/s40264-013-0097-8).
 - **Upstream License & Terms:**
   - Distributed upstream under the **Apache License, Version 2.0**.
   - Verified upstream at `v2.4.2`: The license is formally declared in package metadata (`DESCRIPTION`: `License: Apache License 2.0`) and repository documentation (`README.md`). Inspection of the upstream repository tree confirms that no standalone `LICENSE` or `NOTICE` file is committed.
@@ -37,12 +37,12 @@ This document describes the provenance, bibliographic citations, and licensing t
 - **Upstream Revision:** Release `v2.4.2` (Published 2026-09-18; maintainer Dr. Martijn Schuemie)
 - **Cryptographic Match:** The bundled binary file `euadrReferenceSet.rda` is **100% byte-identical** to the file distributed in OHDSI `MethodEvaluation` at `v2.4.2` and `main`.
 - **Original Bibliographic Citation:**
-  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*, 2013; 36(Suppl 1):S13–S23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*, 2013; 36(1):13–23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
 - **Upstream License & Legal Provenance:**
   - Standardized into OMOP Concept IDs and distributed within the OHDSI `MethodEvaluation` package under the **Apache License, Version 2.0**.
   - Verified upstream at `v2.4.2`: The license is formally declared in package metadata (`DESCRIPTION`: `License: Apache License 2.0`) and repository documentation (`README.md`). Inspection of the upstream repository tree confirms that no standalone `LICENSE` or `NOTICE` file is committed.
   - Dr. Martijn Schuemie is both the author/maintainer of the Apache-2.0-licensed OHDSI package and a named co-author of the original Coloma et al. (2013) publication.
-  - Copyright in the published journal article text, typesetting, and formatting belongs to Springer International Publishing AG. Factual clinical association data (drug–adverse event ground truth) and OMOP concept identifiers released under Apache 2.0 by OHDSI are redistributed here for non-commercial academic research and methodological reproducibility pursuant to Apache License 2.0 terms.
+  - Copyright in the published journal article text, typesetting, and formatting belongs to Springer International Publishing AG. Factual clinical association data (drug–adverse event ground truth) and OMOP concept identifiers released under Apache 2.0 by OHDSI are redistributed here pursuant to the terms of the Apache License, Version 2.0.
 - **Derivative Nature:**
   - `eu_adr_reference_set.csv` is a **transformed derivative** extracted directly from `euadrReferenceSet.rda` via Python `pyreadr` and `pandas` serialization.
   - Contains 93 evaluated drug–outcome pairs (43 positive controls, 50 negative controls across 10 health outcomes of interest). Field-by-field programmatic comparison confirms 0 differences across all 930 data cells relative to the upstream R data frame.
@@ -54,9 +54,10 @@ This document describes the provenance, bibliographic citations, and licensing t
 
 - **Source:** US Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) Public Dashboard and Quarterly ASCII Data Files.
 - **URL:** [https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard](https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard)
-- **Legal Status:**
-  - Spontaneous adverse event reports submitted to the FDA and compiled in FAERS are records prepared by the United States Government.
-  - Under 17 U.S.C. § 105, copyright protection is not available for any work of the United States Government. FAERS data is in the **public domain**.
+- **Legal Status & Public Data Notice:**
+  - FAERS data files are publicly distributed by the U.S. Food and Drug Administration without copyright restriction as public government data releases.
+  - While government compilations and reports prepared by U.S. government officers or employees are subject to 17 U.S.C. § 105, individual adverse event narratives submitted by third-party reporters (manufacturers, healthcare professionals, consumers) are compiled and published by the FDA for open public access.
+  - **FDA Disclaimer:** This analysis is an independent research effort. It was not conducted by or on behalf of the U.S. Food and Drug Administration and does not represent FDA views, findings, or endorsement.
 - **Distribution Note:**
   - Raw FAERS archives (~14.7 GB extracted across 20 quarterly packages, 2014 Q1 to 2018 Q4) are **excluded** from this repository to ensure a lightweight footprint (~9.6 MB).
   - Users can download raw archives directly from the FDA using the automated script:
