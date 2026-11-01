@@ -393,7 +393,7 @@ faers-mgps-signal-detection/
 │   ├── 34_task_t1_12_final_scientific_corrections/  # Scientific corrections [INCLUDED]
 │   └── 49_task_t1_27_manuscript_integration/  # Supplementary Table S1 [INCLUDED]
 ├── requirements.txt                # Pinned runtime dependencies (Python 3.13)
-├── pyproject.toml                  # Linter configuration
+├── pyproject.toml                  # PEP 621 metadata, Python version requirement, dependencies, & Pyrefly config
 ├── research_architecture_blueprint.md
 ├── LICENSE                         # Apache License 2.0
 ├── DATA_NOTICES.md                 # Third-party data notices & citations
@@ -507,9 +507,9 @@ For comprehensive details on dataset provenance, cryptographic hashes, transform
 
 ## 15. Ethics and Regulatory Declarations
 
-- **Data Governance:** This research uses de-identified, publicly available adverse event report data published by the U.S. FDA and external reference standards published by OHDSI. No identifiable private health information (PHI) was accessed, stored, or processed.
+- **Data Governance and Institutional Independence:** This research was independently conducted by two Master's students as a collaborative academic research project intended for publication. The institution with which the author making this declaration is affiliated had no role in the design, development, funding, supervision, conduct, or oversight of this project. The study used publicly available structured data from the U.S. FDA Adverse Event Reporting System (FAERS) quarterly releases and publicly available external reference standards from OHDSI. No non-public patient records were obtained for this analysis. No institutional IRB approval, exemption, or non-human-subjects research determination is claimed in this repository.
 - **Regulatory Disclaimer:** This analysis is an independent academic research effort. It was not conducted by or on behalf of the U.S. Food and Drug Administration and does not represent FDA views, findings, or endorsement.
 
 ---
 
-*Code and validation suite developed October 2026. Manuscript submitted for peer review.*
+*Code and validation suite developed October 2026.*
