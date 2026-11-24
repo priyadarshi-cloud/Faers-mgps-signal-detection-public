@@ -425,7 +425,7 @@ The following limitations are disclosed in the manuscript (Section 5.2):
 If you use this software or its methodology, please cite this repository:
 
 ```text
-Priyadarshi, A. K. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports.
+Priyadarshi, A. K., & Irshad, H. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports.
 GitHub repository: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public
 ```
 
@@ -455,10 +455,12 @@ Archives are downloaded from `https://fis.fda.gov/content/Exports/faers_ascii_<Y
 
 ### OMOP and EU-ADR Reference Standards
 
-- OMOP: https://github.com/OHDSI/MethodEvaluation
-- EU-ADR: Coloma et al. 2013, Drug Safety 36(1):13-23
+- **OMOP:** Distributed by OHDSI under the Apache License 2.0. Source: https://github.com/OHDSI/MethodEvaluation
+- **EU-ADR:** The EU-ADR reference standard originates from the EU-ADR consortium (Coloma et al. 2013). The reference set itself has been released into the public domain by the EU-ADR consortium, as confirmed in written clarification from Dr. Martijn Schuemie. The technical artifact (`euadrReferenceSet.rda`) is distributed within the OHDSI `MethodEvaluation` R package under the Apache License, Version 2.0. Redistribution is permitted and encouraged; users should cite the original paper:
 
-Files in `data/05_reference_standards/` are included in this repository (no patient-level information).
+  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+
+Files in `data/05_reference_standards/` are included in this repository (no patient-level information). See [`DATA_NOTICES.md`](DATA_NOTICES.md) for full provenance, licensing distinctions, and cryptographic verification.
 
 ### Primary Derived Datasets
 
@@ -498,7 +500,7 @@ limitations under the License.
 The Apache License 2.0 applies to the project software code in `src/` and `scripts/`. Bundled reference standards and public datasets in `data/` are governed by their respective upstream licenses, public-domain determinations, and citations:
 
 - **OMOP Reference Standard:** Distributed under the Apache License 2.0 by OHDSI (Ryan et al. 2013).
-- **EU-ADR Reference Standard:** Standardized into OMOP concepts and distributed under the Apache License 2.0 by OHDSI MethodEvaluation (Coloma et al. 2013).
+- **EU-ADR Reference Standard:** Released into the public domain by the EU-ADR consortium (Coloma et al. 2013). The technical artifact is distributed within the OHDSI `MethodEvaluation` package under the Apache License 2.0. See [`DATA_NOTICES.md`](DATA_NOTICES.md) for the full public-domain clarification and licensing distinction.
 - **FAERS Public Data:** Spontaneous adverse event report compilations publicly distributed by the U.S. FDA without copyright restriction. See [FDA Disclaimer](#2-data-sources-and-historical-cohort-definition) and [`DATA_NOTICES.md`](DATA_NOTICES.md) for details.
 
 For comprehensive details on dataset provenance, cryptographic hashes, transformation methodologies, and bibliographic citations, see [`DATA_NOTICES.md`](DATA_NOTICES.md).

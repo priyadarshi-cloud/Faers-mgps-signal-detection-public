@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports"
+abstract: "An open-source implementation of the Multi-Item Gamma-Poisson Shrinker (MGPS) empirical Bayes methodology for pharmacovigilance signal detection in spontaneous adverse event reporting systems. The software processes safety reports from the U.S. FDA Adverse Event Reporting System (FAERS), calculates disproportionality metrics including the Empirical Bayes Geometric Mean (EBGM) and 90% credible intervals (EB05–EB95), and benchmarks signal discrimination against independent external reference standards under identical observability constraints."
+type: software
+authors:
+  - given-names: "Adarsh Kumar"
+    family-names: "Priyadarshi"
+    affiliation: "Independent Researcher"
+    orcid: "https://orcid.org/0009-0006-7861-0679"
+  - given-names: "Hiba"
+    family-names: "Irshad"
+    affiliation: "Independent Researcher"
+    orcid: "https://orcid.org/0009-0000-9514-8742"
+license: Apache-2.0
+repository-code: "https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public"
+keywords:
+  - "pharmacovigilance"
+  - "adverse-drug-reactions"
+  - "spontaneous-reporting"
+  - "empirical-bayes"
+  - "multi-item-gamma-poisson-shrinker"
+  - "mgps"
+  - "faers"
+  - "signal-detection"
+  - "disproportionality-analysis"

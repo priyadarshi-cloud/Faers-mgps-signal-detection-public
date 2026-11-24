@@ -8,12 +8,14 @@
 
 ---
 
+> **Historical Note:** This document describes the original conceptual architecture designed at project inception. The realized production implementation is documented in README.md.
+
 ## 1. Project Directory Structure
 
 The proposed project structure is designed around strict separation of concerns, immutability of raw observational data, rigorous pipeline stages, configuration-driven execution, and isolated experiment tracking.
 
 ```text
-FAERS AI Model/
+faers-mgps/
 ├── configs/                                # Declarative YAML configurations
 │   ├── data_ingestion.yaml                 # Endpoints, FAERS quarters, openFDA params
 │   ├── preprocessing.yaml                  # De-duplication rules, vocabulary mappings

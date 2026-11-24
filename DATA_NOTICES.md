@@ -33,21 +33,28 @@ This document describes the provenance, bibliographic citations, and licensing t
 - **Dataset Location:** `data/05_reference_standards/eu_adr/`
   - `euadrReferenceSet.rda` ($2,988$ bytes, SHA-256: `5cea251e7ab03a232f871abfb448655b8474ffab325bb19b4fbae8d139203c32`)
   - `eu_adr_reference_set.csv` ($15,389$ bytes, SHA-256: `2195513ac9328c4bc95fc2fe30046c20bbf064ce1eb951d37a392c8f978774f1`)
-- **Upstream Repository:** Observational Health Data Sciences and Informatics (OHDSI) — [`OHDSI/MethodEvaluation`](https://github.com/OHDSI/MethodEvaluation)
-- **Upstream Revision:** Release `v2.4.2` (Published 2026-09-18; maintainer Dr. Martijn Schuemie)
+- **Original Source:** The EU-ADR reference standard was developed by the EU-ADR consortium as part of the European Union Adverse Drug Reactions project. The reference set itself has been released into the public domain by the EU-ADR consortium.
+- **Public-Domain Clarification:** Written clarification was received from Dr. Martijn Schuemie (co-author of the original Coloma et al. 2013 publication and maintainer of the OHDSI `MethodEvaluation` package) confirming:
+  1. The EU-ADR reference standard (the set of drug-adverse event associations) has been released into the public domain by the EU-ADR consortium.
+  2. The technical artifact (`euadrReferenceSet.rda`) is distributed within the OHDSI `MethodEvaluation` R package under the Apache License, Version 2.0. The Apache 2.0 license governs the technical packaging, not the underlying reference standard data.
+  3. Redistribution of the reference set is permitted and encouraged.
+  4. Users should cite the original publication when reusing the reference set.
+- **Technical Distribution:** Observational Health Data Sciences and Informatics (OHDSI) — [`OHDSI/MethodEvaluation`](https://github.com/OHDSI/MethodEvaluation)
+- **Technical Distribution Revision:** Release `v2.4.2` (Published 2026-09-18; maintainer Dr. Martijn Schuemie)
 - **Cryptographic Match:** The bundled binary file `euadrReferenceSet.rda` is **100% byte-identical** to the file distributed in OHDSI `MethodEvaluation` at `v2.4.2` and `main`.
-- **Original Bibliographic Citation:**
-  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*, 2013; 36(1):13–23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
-- **Upstream License & Legal Provenance:**
-  - Standardized into OMOP Concept IDs and distributed within the OHDSI `MethodEvaluation` package under the **Apache License, Version 2.0**.
-  - Verified upstream at `v2.4.2`: The license is formally declared in package metadata (`DESCRIPTION`: `License: Apache License 2.0`) and repository documentation (`README.md`). Inspection of the upstream repository tree confirms that no standalone `LICENSE` or `NOTICE` file is committed.
-  - Dr. Martijn Schuemie is both the author/maintainer of the Apache-2.0-licensed OHDSI package and a named co-author of the original Coloma et al. (2013) publication.
-  - Copyright in the published journal article text, typesetting, and formatting belongs to Springer International Publishing AG. Factual clinical association data (drug–adverse event ground truth) and OMOP concept identifiers released under Apache 2.0 by OHDSI are redistributed here pursuant to the terms of the Apache License, Version 2.0.
+- **Required Academic Citation:**
+  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+  >
+  > Users reusing the EU-ADR reference standard should cite this paper.
+- **Licensing Distinction:**
+  - The **reference standard data** (factual drug-adverse event associations) is in the public domain, as clarified by the EU-ADR consortium via Dr. Martijn Schuemie.
+  - The **technical artifact** (`euadrReferenceSet.rda`) is distributed within the OHDSI `MethodEvaluation` package under the **Apache License, Version 2.0**. The Apache 2.0 license applies to the R package and its technical packaging.
+  - Copyright in the published journal article text, typesetting, and formatting belongs to Springer International Publishing AG.
+  - Dr. Martijn Schuemie is both the maintainer of the OHDSI `MethodEvaluation` package and a named co-author of the original Coloma et al. (2013) publication.
 - **Derivative Nature:**
   - `eu_adr_reference_set.csv` is a **transformed derivative** extracted directly from `euadrReferenceSet.rda` via Python `pyreadr` and `pandas` serialization.
-  - Contains 93 evaluated drug–outcome pairs (43 positive controls, 50 negative controls across 10 health outcomes of interest). Field-by-field programmatic comparison confirms 0 differences across all 930 data cells relative to the upstream R data frame.
+  - Contains 93 evaluated drug-outcome pairs (43 positive controls, 50 negative controls across 10 health outcomes of interest). Field-by-field programmatic comparison confirms 0 differences across all 930 data cells relative to the upstream R data frame.
   - As documented by OHDSI, 93 pairs are distributed rather than the original 94 because Nimesulide (associated with acute liver injury) is absent from RxNorm and unavailable in many jurisdictions.
-
 ---
 
 ## 3. Primary FAERS Data (US FDA)
