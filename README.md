@@ -2,13 +2,18 @@
 
 **A Systematic Evaluation of the Multi-Item Gamma-Poisson Shrinker Against Independent Benchmark Standards with Contextual Characterisation of Drug–Adverse Drug Reaction Pairs**
 
-> **Repository status:** Public research software release.
+> **Repository status:** Public research software release (v1.0.1).
 > This repository contains source code, validated reference standards, and pre-computed publication tables for reproducing the key results of the study.
+> The persistent software concept DOI is [10.5281/zenodo.24507209](https://doi.org/10.5281/zenodo.24507209); the immutable v1.0.0 archival release is indexed at [10.5281/zenodo.24507210](https://doi.org/10.5281/zenodo.24507210).
 > Raw FAERS archives (~14.7 GB) must be downloaded separately. See [Section 13](#13-data-access-instructions).
 
 ## Project Attribution
 
-**Developed by: Adarsh Kumar Priyadarshi**
+**Study & Model Design, Research Methodology, and Authorship:**
+- **Adarsh Kumar Priyadarshi** — Independent Researcher ([ORCID: 0009-0006-7861-0679](https://orcid.org/0009-0006-7861-0679))
+- **Hiba Irshad** — Independent Researcher ([ORCID: 0009-0000-9514-8742](https://orcid.org/0009-0000-9514-8742))
+
+Adarsh Kumar Priyadarshi and Hiba Irshad are joint research co-authors who jointly conceptualised, designed, and developed the FAERS-MGPS research model, analytical methodology, and study.
 
 ---
 
@@ -345,7 +350,7 @@ python scripts/validate_task_t1_02_publication_tables.py
 ## 10. Repository Structure
 
 ```
-faers-mgps-signal-detection/
+faers-mgps-signal-detection-public/
 ├── src/
 │   ├── signal_detection/
 │   │   ├── ebgm_engine.py          # MGPS Gamma-Poisson engine (main algorithm)
@@ -392,9 +397,15 @@ faers-mgps-signal-detection/
 │   ├── 33_task_t1_11_final_benchmark_audit/  # Independently recomputed statistics [INCLUDED]
 │   ├── 34_task_t1_12_final_scientific_corrections/  # Scientific corrections [INCLUDED]
 │   └── 49_task_t1_27_manuscript_integration/  # Supplementary Table S1 [INCLUDED]
+├── docs/
+│   └── archive/                    # Archived historical methodological documentation
+│       ├── README.md               # Historical document index & provenance
+│       ├── research_architecture_blueprint.md
+│       ├── modelling_readiness_and_historical_label_audit.md
+│       └── pre_modelling_readiness_report.md
 ├── requirements.txt                # Pinned runtime dependencies (Python 3.13)
 ├── pyproject.toml                  # PEP 621 metadata, Python version requirement, dependencies, & Pyrefly config
-├── research_architecture_blueprint.md
+├── CITATION.cff                    # Machine-readable scholarly citation metadata
 ├── LICENSE                         # Apache License 2.0
 ├── DATA_NOTICES.md                 # Third-party data notices & citations
 └── README.md
@@ -425,9 +436,12 @@ The following limitations are disclosed in the manuscript (Section 5.2):
 If you use this software or its methodology, please cite this repository:
 
 ```text
-Priyadarshi, A. K., & Irshad, H. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports.
-GitHub repository: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public
+Priyadarshi, A. K., & Irshad, H. (2026). FAERS-MGPS: Empirical Bayes Signal Detection in Spontaneous Pharmacovigilance Reports (Version 1.0.1) [Computer software].
+GitHub: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detection-public
+Zenodo (Concept DOI): https://doi.org/10.5281/zenodo.24507209
 ```
+
+> **DOI Guidance:** The concept DOI [`10.5281/zenodo.24507209`](https://doi.org/10.5281/zenodo.24507209) is the canonical persistent identifier that resolves to all versions of the FAERS-MGPS software. The initial release (v1.0.0) is permanently archived under version DOI [`10.5281/zenodo.24507210`](https://doi.org/10.5281/zenodo.24507210). The version-specific DOI for v1.0.1 will be assigned automatically upon Zenodo deposition following release publication.
 
 *A formal journal citation and article DOI will be added here if the associated research is published.*
 
@@ -436,7 +450,7 @@ GitHub repository: https://github.com/priyadarshi-cloud/Faers-mgps-signal-detect
 1. DuMouchel W. Bayesian data mining in large frequency tables, with an application to the FDA spontaneous reporting system. *The American Statistician*. 1999;53(3):177-190.
 2. Evans SJW, Waller PC, Davis S. Use of proportional reporting ratios (PRRs) for signal generation from spontaneous adverse drug reaction reports. *Pharmacoepidemiology and Drug Safety*. 2001;10(6):483-486.
 3. Ryan PB, Schuemie MJ, Welebob E, Duke J, Valentine S, Hartzema AG. Defining a reference set to support methodological research in drug safety. *Drug Safety*. 2013;36(Suppl 1):S33-S47. DOI: [10.1007/s40264-013-0097-8](https://doi.org/10.1007/s40264-013-0097-8).
-4. Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, et al. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+4. Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Réglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifirò G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13–23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
 5. Benjamini Y, Hochberg Y. Controlling the false discovery rate. *JRSS-B*. 1995;57(1):289-300.
 
 ---
@@ -458,7 +472,7 @@ Archives are downloaded from `https://fis.fda.gov/content/Exports/faers_ascii_<Y
 - **OMOP:** Distributed by OHDSI under the Apache License 2.0. Source: https://github.com/OHDSI/MethodEvaluation
 - **EU-ADR:** The EU-ADR reference standard originates from the EU-ADR consortium (Coloma et al. 2013). The reference set itself has been released into the public domain by the EU-ADR consortium, as confirmed in written clarification from Dr. Martijn Schuemie. The technical artifact (`euadrReferenceSet.rda`) is distributed within the OHDSI `MethodEvaluation` R package under the Apache License, Version 2.0. Redistribution is permitted and encouraged; users should cite the original paper:
 
-  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Réglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifirò G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13–23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
 
 Files in `data/05_reference_standards/` are included in this repository (no patient-level information). See [`DATA_NOTICES.md`](DATA_NOTICES.md) for full provenance, licensing distinctions, and cryptographic verification.
 
@@ -480,7 +494,7 @@ Pre-computed primary evaluation tables and sensitivity outputs are bundled direc
 This project's software code is licensed under the **Apache License, Version 2.0** (the "License"). See the [`LICENSE`](LICENSE) file for the full text of the license.
 
 ```text
-Copyright 2026 Adarsh Kumar Priyadarshi
+Copyright 2026 Adarsh Kumar Priyadarshi, Hiba Irshad
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -501,7 +515,7 @@ The Apache License 2.0 applies to the project software code in `src/` and `scrip
 
 - **OMOP Reference Standard:** Distributed under the Apache License 2.0 by OHDSI (Ryan et al. 2013).
 - **EU-ADR Reference Standard:** Released into the public domain by the EU-ADR consortium (Coloma et al. 2013). The technical artifact is distributed within the OHDSI `MethodEvaluation` package under the Apache License 2.0. See [`DATA_NOTICES.md`](DATA_NOTICES.md) for the full public-domain clarification and licensing distinction.
-- **FAERS Public Data:** Spontaneous adverse event report compilations publicly distributed by the U.S. FDA without copyright restriction. See [FDA Disclaimer](#2-data-sources-and-historical-cohort-definition) and [`DATA_NOTICES.md`](DATA_NOTICES.md) for details.
+- **FAERS Public Data:** Spontaneous adverse event report compilations publicly compiled and distributed by the U.S. FDA via Quarterly ASCII data packages and the FAERS Public Dashboard for research, surveillance, and safety evaluation. Raw FAERS archives are excluded from this repository. See [FDA Disclaimer](#2-data-sources-and-historical-cohort-definition) and [`DATA_NOTICES.md`](DATA_NOTICES.md) for details.
 
 For comprehensive details on dataset provenance, cryptographic hashes, transformation methodologies, and bibliographic citations, see [`DATA_NOTICES.md`](DATA_NOTICES.md).
 

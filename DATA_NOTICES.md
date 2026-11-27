@@ -43,7 +43,7 @@ This document describes the provenance, bibliographic citations, and licensing t
 - **Technical Distribution Revision:** Release `v2.4.2` (Published 2026-09-18; maintainer Dr. Martijn Schuemie)
 - **Cryptographic Match:** The bundled binary file `euadrReferenceSet.rda` is **100% byte-identical** to the file distributed in OHDSI `MethodEvaluation` at `v2.4.2` and `main`.
 - **Required Academic Citation:**
-  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Reglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifiro G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13-23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
+  > Coloma PM, Avillach P, Salvo F, Schuemie MJ, Ferrajolo C, Pariente A, Fourrier-Réglat A, Molokhia M, Patadia V, van der Lei J, Sturkenboom M, Trifirò G. A reference standard for evaluation of methods for drug safety signal detection using electronic healthcare record databases. *Drug Safety*. 2013;36(1):13–23. DOI: [10.1007/s40264-012-0002-x](https://doi.org/10.1007/s40264-012-0002-x).
   >
   > Users reusing the EU-ADR reference standard should cite this paper.
 - **Licensing Distinction:**
@@ -62,8 +62,8 @@ This document describes the provenance, bibliographic citations, and licensing t
 - **Source:** US Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) Public Dashboard and Quarterly ASCII Data Files.
 - **URL:** [https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard](https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard)
 - **Legal Status & Public Data Notice:**
-  - FAERS data files are publicly distributed by the U.S. Food and Drug Administration without copyright restriction as public government data releases.
-  - While government compilations and reports prepared by U.S. government officers or employees are subject to 17 U.S.C. § 105, individual adverse event narratives submitted by third-party reporters (manufacturers, healthcare professionals, consumers) are compiled and published by the FDA for open public access.
+  - FAERS data files are publicly compiled and distributed by the U.S. Food and Drug Administration (FDA) via Quarterly ASCII data packages and the FAERS Public Dashboard for public research, surveillance, and safety evaluation.
+  - While government compilations and official government works prepared by U.S. government officers or employees are subject to 17 U.S.C. § 105, spontaneous adverse event reports originate from diverse third-party submitters (manufacturers, healthcare professionals, consumers). Project-generated analytical tables represent independent extractions produced by the project pipeline; raw FAERS archives are not redistributed in this repository.
   - **FDA Disclaimer:** This analysis is an independent research effort. It was not conducted by or on behalf of the U.S. Food and Drug Administration and does not represent FDA views, findings, or endorsement.
 - **Distribution Note:**
   - Raw FAERS archives (~14.7 GB extracted across 20 quarterly packages, 2014 Q1 to 2018 Q4) are **excluded** from this repository to ensure a lightweight footprint (~9.6 MB).
